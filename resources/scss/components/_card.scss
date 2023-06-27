@@ -1,0 +1,15 @@
+.card {    
+  box-shadow: 0px 2px 6px 0px rgba($color: #111111, $alpha: .12);
+  &.line{
+    border: 2px solid $base-color;
+  }
+  &.r-8 {
+    border-radius:8px;
+  }
+  &.r-16 {
+    border-radius:16px;
+  }
+  &.r-32 {
+    border-radius:32px;
+  }
+}
