@@ -1,1 +1,15 @@
 // button
+.button{
+    font-size: $fs-16;
+    font-weight: $bold;
+    text-align: center;
+    color:$main-color;
+    &.primary{
+        padding:12.5px;
+        background-color: $main-color;
+        color:#fff;
+        &::focused{
+            background-color: $main-dark-color;
+        }
+    }
+}
