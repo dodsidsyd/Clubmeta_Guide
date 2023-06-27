@@ -1,15 +1,76 @@
 // button
 .button{
+    display: inline-block;
+    padding: 8.5px;
+    border-radius: 12px;
     font-size: $fs-16;
     font-weight: $bold;
     text-align: center;
-    color:$main-color;
+    &.-l{
+        padding: 12.5px;
+        border-radius: 16px;
+    }
+    &.-s{
+        padding: 5.5px;
+        font-size: $fs-12;
+        font-weight: $normal;
+        border-radius: 8px;
+    }
     &.primary{
-        padding:12.5px;
         background-color: $main-color;
         color:#fff;
-        &::focused{
+        &:focus, :active{
             background-color: $main-dark-color;
         }
+    }
+    &.line{
+        border: 1px solid $main-color;
+        background-color: #fff;
+        color:$main-color;
+        &:focus, :active{
+            background-color: $main-bg-color;
+        }
+    }
+    &.flat{
+        background-color: $main-bg-color;
+        color:$main-color;
+        &:focus, :active{
+            color: $main-dark-color;
+        }
+    }
+    &.ghost{
+        background-color: transparent;
+        color:$main-color;
+        &:focus, :active{
+            color: $main-dark-color;
+        }
+    }
+    &.disable{
+        color:#585858;
+        background-color: #cfcfcf;
+        cursor: default;
+    }
+    &:disabled{
+        color:#585858;
+        background-color: #cfcfcf;
+    }
+}
+
+.btn-follow{
+    display: inline-block;
+    padding: 5.5px;
+    border-radius: 8px;
+    font-size: $fs-12;
+    font-weight: $normal;
+    color:$base-color;
+    text-align: center;
+    box-shadow: 0px 2px 6px rgba(20,36,91,0.12);
+    &.-orange{
+        background-color: $main-color;
+        color:#fff;
+    }
+    &.-gray{
+        background-color: #cfcfcf;
+        color:$base-color;
     }
 }
