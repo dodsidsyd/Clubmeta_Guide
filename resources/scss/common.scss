@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import './components/buttons', './helpers/functions', './helpers/mixins', './helpers/variables', './components/card'; 
+@import './helpers/functions', './helpers/mixins', './helpers/variables', './components/card', './components/buttons'; 
 
 body{
     color:$base-color;
@@ -117,5 +117,5 @@ body{
   /*title*/
   h1{
     font-weight: $bold;
-    font-size: $fs-tit1;
+    font-size: $fs-24;
   }
