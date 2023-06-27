@@ -51,3 +51,81 @@ $z-header:200;
 $z-gnb:190;
 $z-botArea:200;
 $z-layer:1000;
+
+// margin
+.mg-auto {
+  margin: auto !important;
+}
+.mg-auto-x {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.mg-auto-y {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+.ml-auto {
+  margin-left: auto !important;
+}
+.mr-auto {
+  margin-right: auto !important;
+}
+.mt-auto {
+  margin-top: auto !important;
+}
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+@for $i from 0 through 100 {
+  .mg-#{$i} {
+    margin: $i * 1px !important;
+  }
+  .mg-#{$i}-x {
+    margin-left: $i * 1px !important;
+    margin-right: $i * 1px !important;
+  }
+  .mg-#{$i}-y {
+    margin-top: $i * 1px !important;
+    margin-bottom: $i * 1px !important;
+  }
+  .mt-#{$i} {
+    margin-top: $i * 1px !important;
+  }
+  .mb-#{$i} {
+    margin-bottom: $i * 1px !important;
+  }
+  .ml-#{$i} {
+    margin-left: $i * 1px !important;
+  }
+  .mr-#{$i} {
+    margin-right: $i * 1px !important;
+  }
+}
+
+// padding
+@for $i from 0 through 100 {
+  .pd-#{$i} {
+    padding: $i * 1px !important;
+  }
+  .pd-#{$i}-x {
+    padding-left: $i * 1px !important;
+    padding-right: $i * 1px !important;
+  }
+  .pd-#{$i}-y {
+    padding-top: $i * 1px !important;
+    padding-bottom: $i * 1px !important;
+  }
+  .pt-#{$i} {
+    padding-top: $i * 1px !important;
+  }
+  .pb-#{$i} {
+    padding-bottom: $i * 1px !important;
+  }
+  .pl-#{$i} {
+    padding-left: $i * 1px !important;
+  }
+  .pr-#{$i} {
+    padding-right: $i * 1px !important;
+  }
+}
