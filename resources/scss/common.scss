@@ -1,11 +1,6 @@
 @charset "UTF-8";
 @import './components/buttons', './helpers/functions', './helpers/mixins', './helpers/variables', './components/card'; 
 
-:root{
-  /*color*/
-  --main-color: #FF5C00;
-}
-
 body{
     color:$base-color;
     font-weight: $noraml; 
