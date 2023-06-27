@@ -1,2 +1,7 @@
 @charset "UTF-8";
-@import './components/buttons', './helpers/functions', './components/mixins', './components/variables'; 
+@import './components/buttons', './helpers/functions', './helpers/mixins', './helpers/variables'; 
+
+:root{
+  /*color*/
+  --main-color: #FF5C00;
+}
