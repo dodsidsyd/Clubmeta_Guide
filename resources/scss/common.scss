@@ -94,54 +94,54 @@ body{
   
   @for $i from 0 through 100 {
     .mg-#{$i} {
-      margin: $i * 1px !important;
+      margin: $i * .1rem !important;
     }
     .mg-#{$i}-x {
-      margin-left: $i * 1px !important;
-      margin-right: $i * 1px !important;
+      margin-left: $i * .1rem !important;
+      margin-right: $i * .1rem !important;
     }
     .mg-#{$i}-y {
-      margin-top: $i * 1px !important;
-      margin-bottom: $i * 1px !important;
+      margin-top: $i * .1rem !important;
+      margin-bottom: $i * .1rem !important;
     }
     .mt-#{$i} {
-      margin-top: $i * 1px !important;
+      margin-top: $i * .1rem !important;
     }
     .mb-#{$i} {
-      margin-bottom: $i * 1px !important;
+      margin-bottom: $i * .1rem !important;
     }
     .ml-#{$i} {
-      margin-left: $i * 1px !important;
+      margin-left: $i * .1rem !important;
     }
     .mr-#{$i} {
-      margin-right: $i * 1px !important;
+      margin-right: $i * .1rem !important;
     }
   }
   
   // padding
   @for $i from 0 through 100 {
     .pd-#{$i} {
-      padding: $i * 1px !important;
+      padding: $i * .1rem !important;
     }
     .pd-#{$i}-x {
-      padding-left: $i * 1px !important;
-      padding-right: $i * 1px !important;
+      padding-left: $i * .1rem !important;
+      padding-right: $i * .1rem !important;
     }
     .pd-#{$i}-y {
-      padding-top: $i * 1px !important;
-      padding-bottom: $i * 1px !important;
+      padding-top: $i * .1rem !important;
+      padding-bottom: $i * .1rem !important;
     }
     .pt-#{$i} {
-      padding-top: $i * 1px !important;
+      padding-top: $i * .1rem !important;
     }
     .pb-#{$i} {
-      padding-bottom: $i * 1px !important;
+      padding-bottom: $i * .1rem !important;
     }
     .pl-#{$i} {
-      padding-left: $i * 1px !important;
+      padding-left: $i * .1rem !important;
     }
     .pr-#{$i} {
-      padding-right: $i * 1px !important;
+      padding-right: $i * .1rem !important;
     }
   }
   
