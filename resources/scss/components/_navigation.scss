@@ -16,11 +16,11 @@
       width:3rem;
       height:3rem;
       + span {
-        font-size:1rem;
+        font-size:1rem;        
       }
     }    
     &:first-child .nav-icon {
-      background-image:url("data:image/svg+xml,%0A%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.67127 11.8431C5.2443 12.2226 5 12.7666 5 13.3379V23.7731C5 24.8777 5.89543 25.7731 7 25.7731H11.6667V19.482C11.6667 17.641 13.159 16.1486 15 16.1486C16.8409 16.1486 18.3333 17.641 18.3333 19.482V25.7731H23C24.1046 25.7731 25 24.8777 25 23.7731V13.3379C25 12.7666 24.7557 12.2226 24.3287 11.8431L16.3287 4.73199C15.571 4.05841 14.429 4.05841 13.6713 4.73199L5.67127 11.8431Z' fill='%23B7B7B7'/%3E%3C/svg%3E%0A");        
+      background: url(../../images/nav-home.png) no-repeat center;
     }  
     &:nth-child(2) .nav-icon{
       background-image:url("data:image/svg+xml,%0A%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 9C4 6.79086 5.79086 5 8 5L8 10H4V9ZM4 12V21C4 23.2091 5.79086 25 8 25H22C24.2091 25 26 23.2091 26 21V12H4ZM26 10V9C26 6.79086 24.2091 5 22 5V10H26ZM20 5H18V10H20V5ZM16 5H14V10H16V5ZM12 5H10L10 10H12L12 5ZM17.5 16.634C18.1667 17.0189 18.1667 17.9811 17.5 18.366L13.75 20.5311C13.0833 20.916 12.25 20.4349 12.25 19.6651V15.3349C12.25 14.5651 13.0833 14.084 13.75 14.4689L17.5 16.634Z' fill='%23B7B7B7'/%3E%3C/svg%3E%0A");

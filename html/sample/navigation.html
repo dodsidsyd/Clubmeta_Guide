@@ -39,102 +39,12 @@
           <span>마이</span>
         </a>
       </div>
-    </div>
-    <div class="pb-20">
-      <div class="bottom-nav">
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>홈</span>
-        </a>
-        <a href="#none" class="on" role="button">
-          <span class="nav-icon"></span>
-          <span>피드</span>
-        </a>
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>촬영</span>
-        </a>
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>음악</span>
-        </a>
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>마이</span>
-        </a>
-      </div>
-    </div>
-    <div class="pb-20">
-      <div class="bottom-nav">
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>홈</span>
-        </a>
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>피드</span>
-        </a>
-        <a href="#none" class="on" role="button">
-          <span class="nav-icon"></span>
-          <span>촬영</span>
-        </a>
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>음악</span>
-        </a>
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>마이</span>
-        </a>
-      </div>
-    </div>
-    <div class="pb-20">
-      <div class="bottom-nav">
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>홈</span>
-        </a>
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>피드</span>
-        </a>
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>촬영</span>
-        </a>
-        <a href="#none" class="on" role="button">
-          <span class="nav-icon"></span>
-          <span>음악</span>
-        </a>
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>마이</span>
-        </a>
-      </div>
-    </div>
-    <div class="pb-20">
-      <div class="bottom-nav">
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>홈</span>
-        </a>
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>피드</span>
-        </a>
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>촬영</span>
-        </a>
-        <a href="#none" role="button">
-          <span class="nav-icon"></span>
-          <span>음악</span>
-        </a>
-        <a href="#none" class="on" role="button">
-          <span class="nav-icon"></span>
-          <span>마이</span>
-        </a>
-      </div>
-    </div>
+    </div>  
+    <script>
+    let fnbButton = $('.bottom-nav > a');
+      fnbButton.on('click touchend', function(){
+        $(this).addClass('on').siblings().removeClass('on')
+      })  
+    </script>
 </body>
 </html>
