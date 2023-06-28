@@ -2,15 +2,15 @@
   position:sticky;
   top:0;
   width:100%;  
-  padding-right:16px;
-  padding-left:16px;
+  padding-right:1.6rem;
+  padding-left:1.6rem;
   box-sizing:border-box; 
   > div {
     display:flex;
     position:relative;
     justify-content:space-between;
     align-items:center;
-    height:42px;    
+    height:4.2rem;    
   }
   .head-center {
     position:absolute;
@@ -19,13 +19,13 @@
     transform: translate(-50%,-50%);
   }
   .head-search {
-    width:24px;
-    height:24px;
+    width:2.4rem;
+    height:2.4rem;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.8663 10.9332C16.8663 14.2099 14.2099 16.8663 10.9331 16.8663C7.65636 16.8663 5 14.2099 5 10.9332C5 7.65636 7.65636 5 10.9331 5C14.2099 5 16.8663 7.65636 16.8663 10.9332ZM15.7994 17.199C14.4558 18.244 12.7671 18.8663 10.9331 18.8663C6.55179 18.8663 3 15.3145 3 10.9332C3 6.55179 6.55179 3 10.9331 3C15.3145 3 18.8663 6.55179 18.8663 10.9332C18.8663 12.7669 18.2441 14.4554 17.1993 15.7989C17.2369 15.8272 17.273 15.8584 17.3072 15.8926L20.7071 19.2925C21.0976 19.683 21.0976 20.3162 20.7071 20.7067C20.3166 21.0972 19.6834 21.0972 19.2929 20.7067L15.893 17.3068C15.8588 17.2726 15.8276 17.2365 15.7994 17.199Z' fill='black'/%3E%3C/svg%3E");
   }
   .head-back {
-    width:24px;
-    height:24px;
+    width:2.4rem;
+    height:2.4rem;
     background-image:url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12H18.5M4 12L10.5 6M4 12L10.5 18' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
   }
   .search-inp {
@@ -34,14 +34,14 @@
     width:100%;
     input {
       width:100%;
-      height:32px;
-      margin-right:4px;
-      margin-left:4px;
-      padding:0px 16px 0px 16px;
-      border:1px solid #CFCFCF;
-      border-radius:12px;
+      height:3.2rem;
+      margin-right:.4rem;
+      margin-left:.4rem;
+      padding:0 1.6rem 0 1.6rem;
+      border:.1rem solid #CFCFCF;
+      border-radius:1.2rem;
       &::placeholder {
-        font-size: 16px;
+        font-size: 1.6rem;
         font-weight: 500;
         color: $placeholder-color;
       }
