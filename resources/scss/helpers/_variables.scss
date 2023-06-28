@@ -31,21 +31,21 @@ $form-bColor:#fff;
 $normal:500;
 $bold:700;
 
-$fs-24:24px;
-$fs-20:20px;
-$fs-16:16px;
-$fs-14:14px;
-$fs-12:12px;
-$fs-10:10px;
-$fs-8:8px;
+$fs-24:2.4rem;
+$fs-20:2rem;
+$fs-16:1.6rem;
+$fs-14:1.4rem;
+$fs-12:1.2rem;
+$fs-10:1rem;
+$fs-8:0.8rem;
 
-$screen-xs-max:720px; // 모바일
-$screen-sm-min:721px;
-$screen-md-min:992px;
-$screen-lg-min:1364px; // PC
+$screen-xs-max:72rem; // 모바일
+$screen-sm-min:72.1rem;
+$screen-md-min:99.2rem;
+$screen-lg-min:136.4rem; // PC
 
-$min-width:1440px;
-$snb-width:236px;
+$min-width:144rem;
+$snb-width:23.6rem;
 
 $z-header:200;
 $z-gnb:190;
