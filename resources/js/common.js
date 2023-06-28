@@ -137,4 +137,9 @@ const ui = {
 
 $(document).ready(() => {
 	ui.init();
+  // fnb 
+  let fnbButton = $('.bottom-nav > a');
+  fnbButton.on('click touchend', function(){
+    $(this).addClass('on').siblings().removeClass('on')
+  })      
 });
