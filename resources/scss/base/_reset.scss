@@ -1,4 +1,9 @@
 @charset "UTF-8";
+
+html {
+  font-size: 62.5%;
+}
+
 body, div, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, blockquote, table, th, td, input, select, textarea, blockquote, address, button {
 	padding: 0;
 	margin: 0;
@@ -54,18 +59,16 @@ body, th, td, input, select, textarea, button {
 	font-size: 15px;
 	line-height: 1;
 	font-family: "Pretendard","Apple SD Gothic Neo","AppleSDGothicNeo",sans-serif;
-	color: #666;
+	color: #111;
 	word-break: break-word;
 	letter-spacing: -0.05em;
 }
 
 a {
-	color: #666;
 	text-decoration: none;
 }
 
 a:active, a:hover, a:link, a:visited {
-	color: #666;
 	text-decoration: none;
 }
 

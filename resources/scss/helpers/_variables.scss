@@ -1,33 +1,43 @@
 // Sass 변수
 //$font-family:'Noto Sans KR', HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif;
 
-$base-color:#666;
-$strong-color:#2b2b2b;
-$placeholder-color:#929292;
-$error-color:#f36336;
+$base-color:#111;
+$placeholder-color:#707070;
+$error-color:#F50F00;
 
-$point-color:#ffcc00;
 
 // 메인 컬러
-$main1-color:#ffbc00;
-$main2-color:$point-color;
-$main3-color:#60584c;
+$main-color:#FF5C00;
+$main-dark-color:#E45200;
+$main-light-color:#FF880A;
+$main-bg-color:#FFF8F2;
 
 // 서브 컬러
-$sub1-color:#545045;
-$sub2-color:#8d744b;
-$sub3-color:#84888b;
+$sub-color:#0F0AE3;
+$sub-dark-color:#0300A7;
+$sub-light-color:#306AFF;
+$sub-bg-color:#F4F8FF;
 
-$bg-color:#f8f8f8;
-
+// 기타 컬러
 $red-color:#Ff0000;
-$blue-color:#0000ff;
+$blue-color:#26EBF8;
+$yellow-color:#F9E000;
+$green-color:#33E317;
+$pink-color:#E92DFF;
 
-$form-bColor:#ececec;
+$form-bColor:#fff;
 
-$noraml:400;
-$medium:500;
-$bold:600;
+//폰트 
+$normal:500;
+$bold:700;
+
+$fs-24:24px;
+$fs-20:20px;
+$fs-16:16px;
+$fs-14:14px;
+$fs-12:12px;
+$fs-10:10px;
+$fs-8:8px;
 
 $screen-xs-max:720px; // 모바일
 $screen-sm-min:721px;
