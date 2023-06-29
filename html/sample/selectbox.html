@@ -17,23 +17,59 @@
 <body>
     <div class="pd-20">
         <h1 class="fwb fs-24">Selectbox</h1>
-        <div class="pd-20">
+        <ul>
+            <li class="mt-4 fs-12">1. sort버튼 누르면 바뀌는 정렬에 따른 이미지가 없음</li>
+            <li class="mt-4 fs-12">2. 셀렉트는 포커스가 없는건지 아니면 인풋이랑 동일 디자인..?</li>
+            <li class="mt-4 fs-12">3. 드롭다운에 백그라운드는 hover 스타일인지 선택시 스타일인지</li>
+        </ul>
+        <div class="flex">
+                    <div class="pd-20">
             <div class="input-wrap select-wrap">
-                <select name="selectbox" class="selectbox">
-                    <option value="최신순">최신순</option>
-                    <option value="옵션1">드롭다운1</option>
-                    <option value="옵션2">드롭다운2</option>
-                    <option value="옵션3">드롭다운3</option>
-                    <option value="옵션4">드롭다운4</option>
-                </select>
+                <div class="selectbox">
+                    <button type="button" class="label">최신순</button>
+                    <ul class="dropdown">
+                        <li class="option">드롭다운1</li>
+                        <li class="option">드롭다운2</li>
+                        <li class="option">드롭다운3</li>
+                        <li class="option">드롭다운4</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="pd-20">
             <div class="input-wrap select-wrap">
                 <button type="button" class="btn-filter"></button>
-                <select name="selectbox" class="selectbox"></select>
+                <div class="selectbox">
+                    <button type="button" class="label">최신순</button>
+                    <ul class="dropdown">
+                        <li class="option">드롭다운1</li>
+                        <li class="option">드롭다운2</li>
+                        <li class="option">드롭다운3</li>
+                        <li class="option">드롭다운4</li>
+                    </ul>
+                </div>
             </div>
         </div>
+        </div>
+
     </div>
 </body>
+<script>
+    function selectbox() {
+    const labelBtns = document.querySelectorAll('.selectbox .label');
+
+    labelBtns.forEach(function(labelBtn) {
+        labelBtn.addEventListener('click', handleDropdownToggle);
+        labelBtn.addEventListener('touchstart', handleDropdownToggle);
+    });
+    }
+
+    function handleDropdownToggle(event) {
+    const dropdown = this.nextElementSibling;
+    dropdown.classList.toggle('on');
+    }
+
+selectbox();
+
+</script>
 </html>
