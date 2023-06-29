@@ -1,4 +1,10 @@
 //input text
+input{
+    -moz-user-select: auto;
+    -webkit-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}
 .input-wrap{
     position: relative;
     width: fit-content;
