@@ -124,8 +124,8 @@ const ui = {
                 }
             });
             //닫기
-            $(document).on('click', ui.tooltip.className.closeBtn, function () {
-
+            $(document).on('click', ui.tooltip.className.closeBtn, function (e) {
+                e.preventDefault();
                 const $cont = $(this).closest(ui.tooltip.className.body);
                 const $btn = $cont.siblings(ui.tooltip.className.btn);
                 $btn.removeClass(ui.tooltip.className.active.slice(1));
@@ -133,11 +133,12 @@ const ui = {
                     $btn.focus();
                 });
             });
-            $(document).on('click', function (e) {
-                e.preventDefault();
+            $(document)
+            .on('click touchend', function (e) {
                 $(ui.tooltip.className.body).stop(true, false).fadeOut();
                 $(ui.tooltip.className.wrap + ' ' + ui.tooltip.className.btn).removeClass(ui.tooltip.className.active.slice(1));
-            }).on('click touchend', ui.tooltip.className.wrap, function (e) {
+            })
+            .on('click touchend', ui.tooltip.className.wrap, function (e) {
                 e.stopPropagation();
             });
         }
