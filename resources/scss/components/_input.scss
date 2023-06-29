@@ -1,8 +1,8 @@
 //input text
-.input-text-box{
+.input-wrap{
     position: relative;
     width: fit-content;
-    input.input-text{
+    .input-text{
         height: 4.4rem;
         padding:0 1.6rem;
         outline: 0;
@@ -38,13 +38,9 @@
             color: $error-color;
             &:focus{
                 border:1px solid $error-color;
-                + .btn-in-input{
-                }
             }
             &:active{
                 border:1px solid $error-color;
-                + .btn-in-input{
-                }
             }
             &::placeholder{
                 color: $error-color;
@@ -67,6 +63,18 @@
         &:disabled{
             background-color: #cfcfcf;
             color: #707070;
+            &:focus{
+                border:0;
+                + .btn-in-input{
+                    display: none;
+                }
+            }
+            &:active{
+                border:0;
+                + .btn-in-input{
+                    display: none;
+                }
+            }
         }
     }
     .ico-del{
