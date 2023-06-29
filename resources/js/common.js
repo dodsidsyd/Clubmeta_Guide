@@ -70,25 +70,25 @@ const ui = {
             if (!$tar.find(ui.tooltip.className.closeBtn).length) $tar.find(ui.tooltip.className.inner).append('<a href="#" class="' + ui.tooltip.className.closeBtn.slice(1) + '" role="button" aria-label="툴팁닫기"></a>');
             ui.tooltip.resize();
         },
-        // aria: function (element) {
-        //   $(element).each(function (e) {
-        //     const $btn = $(this).find(ui.tooltip.className.btn);
-        //     const $cont = $(this).find(ui.tooltip.className.body);
-        //     let $contId = $cont.attr('id');
-        //     const $closeBtn = $(this).find(ui.tooltip.className.closeBtn);
+        aria: function (element) {
+          $(element).each(function (e) {
+            const $btn = $(this).find(ui.tooltip.className.btn);
+            const $cont = $(this).find(ui.tooltip.className.body);
+            let $contId = $cont.attr('id');
+            const $closeBtn = $(this).find(ui.tooltip.className.closeBtn);
             
-        //     if (!$contId) $contId = 'ttCont-' + e;
-        //     $btn.attr({
-        //         role: 'button'
-        //         // 'aria-describedby': $contId
-        //     });
-        //     $cont.attr({
-        //         // id: $contId,
-        //         role: 'tooltip'
-        //     });
-        //     $closeBtn.attr('role', 'button');
-        //   });
-        // },
+            if (!$contId) $contId = 'ttCont-' + e;
+            $btn.attr({
+                role: 'button'
+                // 'aria-describedby': $contId
+            });
+            $cont.attr({
+                // id: $contId,
+                role: 'tooltip'
+            });
+            $closeBtn.attr('role', 'button');
+          });
+        },
         reInit: function () {
             ui.tooltip.aria(ui.tooltip.className.wrap);
         },
@@ -133,7 +133,7 @@ const ui = {
                     $btn.focus();
                 });
             });
-            $(document).on('click touchend', function (e) {
+            $(document).on('click', function (e) {
                 e.preventDefault();
                 $(ui.tooltip.className.body).stop(true, false).fadeOut();
                 $(ui.tooltip.className.wrap + ' ' + ui.tooltip.className.btn).removeClass(ui.tooltip.className.active.slice(1));
