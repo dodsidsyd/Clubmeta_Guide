@@ -1,0 +1,36 @@
+//input textarea
+.input-wrap{
+    .textarea{
+        width: 100%;
+        min-height: 11.2rem;
+        padding:1.6rem;
+        outline: 0;
+        border: 1px solid #cfcfcf;
+        border-radius: 1.6rem;
+        background-color: #fff;
+        font-size: $fs-16;
+        font-weight: $normal;
+        color:$base-color;
+        resize: none;
+        box-sizing: border-box;
+        &::placeholder{
+            color: #707070;
+        }
+        &:focus{
+            border: 2px solid $base-color;
+            color: $base-color;
+        }
+        &:active{
+            border: 2px solid $base-color;
+            color: $base-color;
+        }
+    }
+    .num-of-type{
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        font-weight: $normal;
+        font-size: $fs-10;
+        color: #585858;
+    }
+}
