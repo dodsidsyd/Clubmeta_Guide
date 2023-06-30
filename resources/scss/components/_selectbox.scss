@@ -30,7 +30,10 @@
                 height: 2.4rem;
                 padding: 0px 8px;
                 border-radius: 0.4rem;
-                &:hover{
+                &:focus{
+                    background-color: $main-bg-color;
+                }
+                &:active{
                     background-color: $main-bg-color;
                 }
                 + .option{
