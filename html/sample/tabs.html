@@ -12,23 +12,122 @@
     <script src="../../resources/js/lib/jquery-ui.min.js"></script>
     <script src="../../resources/js/common.js"></script>
 </head>
-<body>
+<body>  
     <div class="pd-20">
       <h1>tabs</h1>
     </div>   
-    <div class="tabMenuW">
-      <h2 class="tabMenu on"><a href="#tab01">추천</a></h2>
-      <div id="tab01" class="tabCon">        
-        <p>tab1</p>
+    <div class="flex mt-10">
+      <div class="col-2">
+        <div class="fs-20">Fill</div>
       </div>
-    
-      <h2 class="tabMenu"><a href="#tab02">추천</a></h2>
-      <div id="tab02" class="tabCon">
-        <p>tab2</p>
+      <div class="col-2">
+        <div class="tab-fill ui-tab">
+          <div class="tab-inner">         
+            <ul class="tab-list">
+              <li class="tab active"><a href="#tab1-1">추천</a></li>
+              <li class="tab"><a href="#tab1-2">추천</a></li>             
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="tab-fill ui-tab">
+          <div class="tab-inner deal-scroll" style="width:300px;">         
+            <ul class="tab-list">
+              <li class="tab active"><a href="#tab1-3">추천</a></li>
+              <li class="tab"><a href="#tab1-4">추천</a></li>             
+              <li class="tab"><a href="#tab1-5">추천</a></li>             
+              <li class="tab"><a href="#tab1-6">추천</a></li>             
+              <li class="tab"><a href="#tab1-7">추천</a></li>             
+              <li class="tab"><a href="#tab1-8">추천</a></li>             
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-    <script>
-      
-    </script>
+    <div class="flex mt-10">
+      <div class="col-2">
+        <div class="fs-20">Line</div>
+      </div>
+      <div class="col-2">
+        <div class="tab-line-menu ui-tab">
+          <div class="tab-inner">
+            <i class="tab-line" aria-hidden="true"></i>
+            <ul class="tab-list">
+              <li class="tab active"><a href="#tab2-1">텍스트탭</a></li>
+              <li class="tab"><a href="#tab2-2">텍스트탭</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="tab-line-menu ui-tab">
+          <div class="tab-inner deal-scroll" style="width:300px;">         
+            <i class="tab-line" aria-hidden="true"></i>
+            <ul class="tab-list">             
+              <li class="tab active"><a href="#tab2-3">텍스트탭</a></li>
+              <li class="tab"><a href="#tab2-4">텍스트탭</a></li>
+              <li class="tab"><a href="#tab2-5">텍스트탭</a></li>
+              <li class="tab"><a href="#tab2-6">텍스트탭</a></li>
+              <li class="tab"><a href="#tab2-7">텍스트탭</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex mt-10" style="align-items: center">
+      <div class="col-2">
+        <div class="fs-20">Box</div>
+      </div>
+      <div class="col-2">
+        <div class="tab-box-menu ui-tab">
+          <div class="tab-inner">
+            <i class="tab-line" aria-hidden="true"></i>
+            <ul class="tab-list">
+              <li class="tab active"><a href="#tab3-1">탭박스</a></li>
+              <li class="tab"><a href="#tab3-2">탭박스</a></li>             
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="tab-box-menu ui-tab has-bg">
+          <div class="tab-inner deal-scroll">         
+            <i class="tab-line" aria-hidden="true"></i>
+            <ul class="tab-list">    
+              <li class="tab active"><a href="#tab3-3">탭박스</a></li>
+              <li class="tab"><a href="#tab3-4">탭박스</a></li>         
+              <li class="tab"><a href="#tab3-5">탭박스</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>    
+  <div class="mt-20">
+    <div id="tab1-1" class="tab-panel active"><h2>탭내용입니다. 111</h2></div>
+    <div id="tab1-2" class="tab-panel"><h2>탭내용입니다. 222</h2></div>      
+    <div id="tab1-3" class="tab-panel active"><h2>탭내용입니다. 333</h2></div>
+    <div id="tab1-4" class="tab-panel"><h2>탭내용입니다. 444</h2></div>
+    <div id="tab1-5" class="tab-panel"><h2>탭내용입니다. 555</h2></div>
+    <div id="tab1-6" class="tab-panel"><h2>탭내용입니다. 666</h2></div>
+    <div id="tab1-7" class="tab-panel"><h2>탭내용입니다. 777</h2></div>
+    <div id="tab1-8" class="tab-panel"><h2>탭내용입니다. 888</h2></div>
+    <br>
+    <div id="tab2-1" class="tab-panel active"><h2>탭내용입니다. 111</h2></div>
+    <div id="tab2-2" class="tab-panel"><h2>탭내용입니다. 222</h2></div>
+    
+    <div id="tab2-3" class="tab-panel active"><h2>탭내용입니다. 333</h2></div>
+    <div id="tab2-4" class="tab-panel"><h2>탭내용입니다. 444</h2></div>
+    <div id="tab2-5" class="tab-panel"><h2>탭내용입니다. 555</h2></div>
+    <div id="tab2-6" class="tab-panel"><h2>탭내용입니다. 666</h2></div>
+    <div id="tab2-7" class="tab-panel"><h2>탭내용입니다. 777</h2></div>
+    <br>
+    <div id="tab3-1" class="tab-panel active"><h2>탭내용입니다. 111</h2></div>
+    <div id="tab3-2" class="tab-panel"><h2>탭내용입니다. 222</h2></div>
+    
+    <div id="tab3-3" class="tab-panel active"><h2>탭내용입니다. 333</h2></div>
+    <div id="tab3-4" class="tab-panel"><h2>탭내용입니다. 444</h2></div>
+    <div id="tab3-5" class="tab-panel"><h2>탭내용입니다. 555</h2></div>
+  </div>   
 </body>
 </html>
