@@ -21,7 +21,7 @@
         <div class="fs-20">Fill</div>
       </div>
       <div class="col-2">
-        <div class="tab-fill ui-tab">
+        <div class="tab-fill ui-tab act-tab">
           <div class="tab-inner">         
             <ul class="tab-list">
               <li class="tab active"><a href="#tab1-1">추천</a></li>
@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="col-6">
-        <div class="tab-fill ui-tab">
+        <div class="tab-fill ui-tab act-tab">
           <div class="tab-inner deal-scroll" style="width:300px;">         
             <ul class="tab-list">
               <li class="tab active"><a href="#tab1-3">추천</a></li>
@@ -62,7 +62,7 @@
         <div class="fs-20">Line</div>
       </div>
       <div class="col-2">
-        <div class="tab-line-menu ui-tab">
+        <div class="tab-line-menu ui-tab act-tab">
           <div class="tab-inner">
             <i class="tab-line" aria-hidden="true"></i>
             <ul class="tab-list">
@@ -77,7 +77,7 @@
         </div>
       </div>
       <div class="col-6">
-        <div class="tab-line-menu ui-tab">
+        <div class="tab-line-menu ui-tab act-tab">
           <div class="tab-inner deal-scroll" style="width:300px;">         
             <i class="tab-line" aria-hidden="true"></i>
             <ul class="tab-list">             
@@ -103,7 +103,7 @@
         <div class="fs-20">Box</div>
       </div>
       <div class="col-2">
-        <div class="tab-box-menu ui-tab">
+        <div class="tab-box-menu ui-tab act-tab">        
           <div class="tab-inner">
             <i class="tab-line" aria-hidden="true"></i>
             <ul class="tab-list">
@@ -118,7 +118,7 @@
         </div>
       </div>
       <div class="col-6">
-        <div class="tab-box-menu ui-tab has-bg">
+        <div class="tab-box-menu ui-tab has-bg ">
           <div class="tab-inner deal-scroll">         
             <i class="tab-line" aria-hidden="true"></i>
             <ul class="tab-list">    
@@ -135,5 +135,22 @@
         </div>
       </div>
     </div>      
+    <script>     
+    // $(document).on('click', '.act-tab a', function (e) {      
+    //   e.preventDefault();
+    //   const $this = $(this);
+    //   const $href = $this.attr('href');
+    //   const $closest = $this.closest('.uact-tab');
+    //   const $siblings = $closest.data('target');      
+    //   const $tab = $(this).closest('.tab').length ? $(this).closest('.tab') : $(this).closest('li');
+    //   const $tabInner = $tab.closest('.tab-inner');
+    //   ui.tab.tabActive($this);
+    //   if ($tabInner.parent().hasClass('tab-scroll')) {
+    //     ui.tab.panelActive($href, $siblings, true, true);
+    //   } else {
+    //     ui.tab.panelActive($href, $siblings, true);
+    //   }    
+    // });
+    </script>
 </body>
 </html>

@@ -204,7 +204,7 @@ $(document).ready(() => {
     );
   }
   function jqTab() {
-    $('.ui-tab a').click(function (e) {
+    $('.act-tab a').click(function (e) {
       e.preventDefault();
       const $href = $(this).attr('href');
       $(this).parent().addClass('active').siblings().removeClass('active');
