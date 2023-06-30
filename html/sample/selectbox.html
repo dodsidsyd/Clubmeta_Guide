@@ -83,6 +83,8 @@
         } else {
             dropdown.style.bottom = '';
         }
+
+        event.stopPropagation();
     }
 
     function handleOptionSelect(event) {
@@ -101,6 +103,7 @@
         optionItem.addEventListener('click', handleOptionSelect);
         optionItem.addEventListener('touchstart', handleOptionSelect);
     });
+
 
     selectbox();
 
