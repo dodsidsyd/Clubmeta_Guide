@@ -147,4 +147,87 @@ const ui = {
 
 $(document).ready(() => {
 	ui.init();
+
+  //탭 패널 열기
+  function tabPanel(){
+    $('.tabMenu a').off('click touchend').on('click touchend', function() {
+      let id = $(this).attr('href'),
+        $tab = $(this).parent();				
+      if ($tab.hasClass('on')) return false;
+      $tab.addClass('on').siblings('.tabMenu').removeClass('on');
+      $(id).show().siblings('.tabCon').hide();			
+    }).off('focus').on('focus', function() {
+      $(this).click();
+    });     
+  }
+
+  //탭 메뉴 스크롤
+  function tabMenuScroll(){
+    let sliders = document.querySelectorAll('.deal-scroll');
+  
+    sliders.forEach(slider => {
+      let mouseDown = false;
+      let startX, scrollLeft;  
+      let startDragging = function (e) {
+        mouseDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      };  
+      let stopDragging = function (event) {
+        mouseDown = false;
+      };  
+      slider.addEventListener('mousemove', (e) => {
+        e.preventDefault();
+        if (!mouseDown) { return; }
+        const x = e.pageX - slider.offsetLeft;
+        const scroll = x - startX;
+        slider.scrollLeft = scrollLeft - scroll;
+      });  
+      slider.addEventListener('mousedown', startDragging, false);
+      slider.addEventListener('mouseup', stopDragging, false);
+      slider.addEventListener('mouseleave', stopDragging, false);
+    });
+  }
+
+  //탭 클릭시 라인 이동
+  function jqTabLine(wrap) {
+    const $active = $(wrap).find('.tab.active');
+    const $activeLeft = $active.position().left;
+    const $activeWidth = $active.outerWidth();
+    const $line = $(wrap).find('.tab-line');
+    $line.stop().animate(
+      {
+        left: $activeLeft,
+        width: $activeWidth
+      },
+      300
+    );
+  }
+  function jqTab() {
+    $('.ui-tab a').click(function (e) {
+      e.preventDefault();
+      const $href = $(this).attr('href');
+      $(this).parent().addClass('active').siblings().removeClass('active');
+      $(this)
+        .parent()
+        .siblings()
+        .each(function (e) {
+          const $btn = $(this).find('a');
+          const $btnHref = $btn.attr('href');
+          $($btnHref).removeClass('active');
+        });
+      $($href).addClass('active');
+      jqTabLine($(this).closest('.ui-tab'));
+    });
+  }
+  function jqTabReady() {
+    $('.ui-tab').each(function () {
+      jqTabLine(this);
+    });
+  }
+  jqTabReady();
+  jqTab();
+  $(window).resize(jqTabReady);
+  tabMenuScroll();
+  tabPanel();
 });
