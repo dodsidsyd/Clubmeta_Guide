@@ -11,8 +11,97 @@
     <script src="../../resources/js/lib/jquery-3.7.0.min.js"></script>
     <script src="../../resources/js/lib/jquery-ui.min.js"></script>
     <script src="../../resources/js/common.js"></script>
+    <style>
+        .wrap {width:100%;min-width:390px;}
+        /* dl {display:flex; align-items:center;} */
+        header.header {height:42px;}
+    </style>
 </head>
 <body>
-    test
+    <div class="wrap">
+        <header class="header">
+            <div>
+                <div class="head-left">
+                  <h1 class="fs-24">제목</h1>        
+                </div>
+                <div class="head-right">
+                  <button type="button" class="head-search" aria-label="검색"></button>
+                </div>
+            </div>
+        </header>
+        <section class="container">
+            <main class="content">
+                <h1 class="pt-20 pb-20">header</h1>
+                <div>
+                    <dl class="pb-20">
+                        <dt><label for="header">header_1</label><input type="radio" name="header"></dt>
+                        <dd>
+                            <div class="header">
+                                <div>
+                                    <h1 class="fs-24">제목</h1>                  
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="pb-20">
+                        <dt><label for="header">header_1</label><input type="radio" name="header"></dt>
+                        <dd>
+                            <div class="header">
+                                <div>
+                                    <div class="head-left">
+                                      <h1 class="fs-24">제목</h1>        
+                                    </div>
+                                    <div class="head-right">
+                                      <button type="button" class="head-search" aria-label="검색"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="pb-20">
+                        <dt><label for="header">header_1</label><input type="radio" name="header"></dt>
+                        <dd>
+                            <div class="header">
+                                <div>
+                                    <div class="head-left">
+                                      <h1 class="fs-24">제목</h1>        
+                                    </div>
+                                    <div class="head-right">
+                                      <button type="button" class="head-search" aria-label="검색"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="pb-20">
+                        <dt><label for="header">header_1</label><input type="radio" name="header"></dt>
+                        <dd>
+                            <div class="header">
+                                <div>
+                                    <div class="head-left">
+                                      <h1 class="fs-24">제목</h1>        
+                                    </div>
+                                    <div class="head-right">
+                                      <button type="button" class="head-search" aria-label="검색"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </main>
+        </section>
+        <footer class="footer">
+
+        </footer>
+    </div>
+    <script>
+        console.log(
+            $('header.header *').remove(),
+            $('header.header').append('<div><h1 class="fs-24">제목</h1></div>')
+        )
+        // $('header.header *').remove();
+        // $('header.header').append('<div><h1 class="fs-24">제목</h1></div>')
+    </script>
 </body>
 </html>
