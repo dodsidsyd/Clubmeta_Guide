@@ -49,6 +49,31 @@
                     </div>
                 </div>
             </div>
+            <br />
+            <br />
+            <br />
+            <h1>ahj</h1>
+            <br />
+            <div class="select">
+                <select title="옵션선택">
+                    <option value="">선택하세요</option>
+                    <option value="1">옵션1</option>
+                    <option value="2">옵션2</option>
+                    <option value="3">옵션3</option>
+                    <option value="4">옵션4</option>
+                    <option value="5">옵션5</option>
+                </select>
+            </div>
+            <div class="select">
+                <select title="옵션선택">
+                    <option value="">선택하세요</option>
+                    <option value="1">옵션1</option>
+                    <option value="2">옵션2</option>
+                    <option value="3">옵션3</option>
+                    <option value="4">옵션4옵션4옵션4옵션4옵션4</option>
+                    <option value="5">옵션5옵션5옵션5옵션5</option>
+                </select>
+            </div>
         </div>
     </body>
     <script>
@@ -102,5 +127,113 @@
         });
 
         selectbox();
+
+        //ahj
+        ui.select = {
+            className: {
+                wrap: '.select',
+                btn: '.btn-select',
+                btnActive: '.open',
+                optionsWrap: '.select-options',
+                option: '.select-option'
+            },
+            init: function () {
+                ui.select.ready();
+                ui.select.UI();
+            },
+            ready: function () {
+                $(ui.select.className.wrap).each(function () {
+                    const $this = $(this);
+                    const $sel = $this.find('select');
+                    if (!$this.find(ui.select.className.btn).length) {
+                        const $title = $sel.attr('title') || '선택';
+                        const $btn = `<button class="${ui.select.className.btn.slice(1)}" title="${$title}"></button>`;
+                        $sel.hide();
+                        $this.append($btn);
+                        ui.select.setBtnText($sel);
+                    }
+                });
+            },
+            setBtnText(elem) {
+                const $el = $(elem);
+                const $btn = $el.siblings(ui.select.className.btn);
+                if (!$el.length || !$btn.length) return;
+                const $selectedTxt = $el.find(':selected').text();
+                $btn.text($selectedTxt);
+            },
+            makeOptions: function (select, btn) {
+                const $select = $(select);
+                const $btn = $(btn);
+                let $optionHtml = '<div class="' + ui.select.className.optionsWrap.slice(1) + '">';
+                if (!$select.children().length) return;
+                let $options = $(ui.select.className.optionsWrap);
+                if ($options.length) $options.remove();
+                $select.children().each(function () {
+                    const $this = $(this);
+                    const $val = $this.attr('value');
+                    const $text = $this.text();
+                    console.log();
+                    const $seletedClass = $this.prop('selected') ? ' selected' : '';
+                    $optionHtml += '<button class="' + ui.select.className.option.slice(1) + $seletedClass + '" data-val="' + $val + '">' + $text + '</button>';
+                });
+
+                $('body').append($optionHtml);
+                $options = $(ui.select.className.optionsWrap);
+                $options.data('select', select).css({
+                    top: $btn.offset().top + $btn.outerHeight(),
+                    left: $btn.offset().left,
+                    minWidth: $btn.outerWidth()
+                });
+            },
+            reset: function () {
+                const $options = $(ui.select.className.optionsWrap);
+                const $btn = $(ui.select.className.btn + ui.select.className.btnActive);
+                if ($btn.length) $btn.removeClass(ui.select.className.btnActive.slice(1));
+                if ($options.length) $options.remove();
+            },
+            UI: function () {
+                //select change
+                $(document).on('change', ui.select.className.wrap + ' select', function (e) {
+                    ui.select.setBtnText(this);
+                });
+
+                //btn
+                $(document).on('click', ui.select.className.btn, function (e) {
+                    e.preventDefault();
+                    const $this = $(this);
+                    const $select = $this.siblings('select');
+                    $(ui.select.className.btn).removeClass(ui.select.className.btnActive.slice(1));
+                    $this.addClass(ui.select.className.btnActive.slice(1));
+                    ui.select.makeOptions($select, $this);
+                });
+
+                //option
+                $(document).on('click', ui.select.className.option, function (e) {
+                    e.preventDefault();
+                    const $this = $(this);
+                    const $val = $this.data('val');
+                    const $closest = $this.closest(ui.select.className.optionsWrap);
+                    const $select = $closest.data('select');
+                    const $btn = $select.siblings(ui.select.className.btn);
+                    $btn.removeClass(ui.select.className.btnActive.slice(1));
+                    $select.val($val).change();
+                    $closest.remove();
+                });
+
+                //out click
+                $(document)
+                    .on('click touchend', function (e) {
+                        e.preventDefault();
+                        ui.select.reset();
+                    })
+                    .on('click touchend', ui.select.className.wrap + ',' + ui.select.className.optionsWrap, function (e) {
+                        e.stopPropagation();
+                    });
+
+                //resize close
+                $(window).on('resize', ui.select.reset);
+            }
+        };
+        ui.select.init();
     </script>
 </html>
