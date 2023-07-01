@@ -96,6 +96,8 @@
                     <option value="5">옵션5옵션5옵션5옵션5</option>
                 </select>
             </div>
+
+            <div style="background: #000; height: 500vh"></div>
         </div>
     </body>
     <script>
@@ -219,7 +221,7 @@
                     let $left = $btn.offset().left;
                     const $width = $btn.outerWidth();
                     if ($top + $options.outerHeight() > $(window).scrollTop() + $(window).height() + 20) {
-                        $top = $top + $btn.outerHeight() - $options.outerHeight() - 2;
+                        $top = $top - $btn.outerHeight() - $options.outerHeight() - 2;
                     }
                     if ($left + $options.outerWidth() > $(window).scrollLeft() + $(window).width()) {
                         $left = $left + $btn.outerWidth() - $options.outerWidth();
@@ -288,9 +290,6 @@
                     .on('click touchend', ui.select.className.wrap + ',' + ui.select.className.optionsWrap, function (e) {
                         e.stopPropagation();
                     });
-
-                //resize close
-                $(window).on('resize', ui.select.reset);
             }
         };
         ui.select.init();
