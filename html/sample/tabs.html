@@ -1,156 +1,155 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="format-detection" content="telephone=no">
-    <title>tabs_Page</title>
-    <link rel="stylesheet" href="../../resources/css/reset.min.css">
-    <link rel="stylesheet" href="../../resources/css/common.min.css">
-    <script src="../../resources/js/lib/jquery-3.7.0.min.js"></script>
-    <script src="../../resources/js/lib/jquery-ui.min.js"></script>
-    <script src="../../resources/js/common.js"></script>
-</head>
-<body>  
-    <div class="pd-20">
-      <h1>tabs</h1>
-    </div>   
-    <div class="flex mt-10">
-      <div class="col-2">
-        <div class="fs-20">Fill</div>
-      </div>
-      <div class="col-2">
-        <div class="tab-fill ui-tab act-tab">
-          <div class="tab-inner">         
-            <ul class="tab-list">
-              <li class="tab active"><a href="#tab1-1">추천</a></li>
-              <li class="tab"><a href="#tab1-2">추천</a></li>             
-            </ul>
-          </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>tabs_Page</title>
+        <link rel="stylesheet" href="../../resources/css/common.min.css" />
+        <script src="../../resources/js/lib/jquery-3.7.0.min.js"></script>
+        <script src="../../resources/js/lib/jquery-ui.min.js"></script>
+        <script src="../../resources/js/common.js"></script>
+    </head>
+    <body>
+        <div class="pd-20">
+            <h1>tabs</h1>
         </div>
-        <div class="tab-panels mt-20 mb-20">
-          <div id="tab1-1" class="tab-panel active"><h2>탭내용입니다. 111</h2></div>
-          <div id="tab1-2" class="tab-panel"><h2>탭내용입니다. 222</h2></div>
+        <div class="flex mt-10">
+            <div class="col-2">
+                <div class="fs-20">Fill</div>
+            </div>
+            <div class="col-2">
+                <div class="tab-fill ui-tab act-tab">
+                    <div class="tab-inner">
+                        <ul class="tab-list">
+                            <li class="tab active"><a href="#tab1-1">추천</a></li>
+                            <li class="tab"><a href="#tab1-2">추천</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-panels mt-20 mb-20">
+                    <div id="tab1-1" class="tab-panel active"><h2>탭내용입니다. 111</h2></div>
+                    <div id="tab1-2" class="tab-panel"><h2>탭내용입니다. 222</h2></div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="tab-fill ui-tab act-tab">
+                    <div class="tab-inner deal-scroll" style="width: 300px">
+                        <ul class="tab-list">
+                            <li class="tab active"><a href="#tab1-3">추천</a></li>
+                            <li class="tab"><a href="#tab1-4">추천</a></li>
+                            <li class="tab"><a href="#tab1-5">추천</a></li>
+                            <li class="tab"><a href="#tab1-6">추천</a></li>
+                            <li class="tab"><a href="#tab1-7">추천</a></li>
+                            <li class="tab"><a href="#tab1-8">추천</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-panels mt-20 mb-20">
+                    <div id="tab1-3" class="tab-panel active"><h2>탭내용입니다. 333</h2></div>
+                    <div id="tab1-4" class="tab-panel"><h2>탭내용입니다. 444</h2></div>
+                    <div id="tab1-5" class="tab-panel"><h2>탭내용입니다. 555</h2></div>
+                    <div id="tab1-6" class="tab-panel"><h2>탭내용입니다. 666</h2></div>
+                    <div id="tab1-7" class="tab-panel"><h2>탭내용입니다. 777</h2></div>
+                    <div id="tab1-8" class="tab-panel"><h2>탭내용입니다. 888</h2></div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-6">
-        <div class="tab-fill ui-tab act-tab">
-          <div class="tab-inner deal-scroll" style="width:300px;">         
-            <ul class="tab-list">
-              <li class="tab active"><a href="#tab1-3">추천</a></li>
-              <li class="tab"><a href="#tab1-4">추천</a></li>             
-              <li class="tab"><a href="#tab1-5">추천</a></li>             
-              <li class="tab"><a href="#tab1-6">추천</a></li>             
-              <li class="tab"><a href="#tab1-7">추천</a></li>             
-              <li class="tab"><a href="#tab1-8">추천</a></li>             
-            </ul>
-          </div>
-        </div>       
-        <div class="tab-panels mt-20 mb-20">
-          <div id="tab1-3" class="tab-panel active"><h2>탭내용입니다. 333</h2></div>
-          <div id="tab1-4" class="tab-panel"><h2>탭내용입니다. 444</h2></div>
-          <div id="tab1-5" class="tab-panel"><h2>탭내용입니다. 555</h2></div>
-          <div id="tab1-6" class="tab-panel"><h2>탭내용입니다. 666</h2></div>
-          <div id="tab1-7" class="tab-panel"><h2>탭내용입니다. 777</h2></div>
-          <div id="tab1-8" class="tab-panel"><h2>탭내용입니다. 888</h2></div>  
+        <div class="flex mt-10">
+            <div class="col-2">
+                <div class="fs-20">Line</div>
+            </div>
+            <div class="col-2">
+                <div class="tab-line-menu ui-tab act-tab">
+                    <div class="tab-inner">
+                        <i class="tab-line" aria-hidden="true"></i>
+                        <ul class="tab-list">
+                            <li class="tab active"><a href="#tab2-1">텍스트탭</a></li>
+                            <li class="tab"><a href="#tab2-2">텍스트탭</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-panels mt-20 mb-20">
+                    <div id="tab2-1" class="tab-panel active"><h2>탭내용입니다. 111</h2></div>
+                    <div id="tab2-2" class="tab-panel"><h2>탭내용입니다. 222</h2></div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="tab-line-menu ui-tab act-tab">
+                    <div class="tab-inner deal-scroll" style="width: 300px">
+                        <i class="tab-line" aria-hidden="true"></i>
+                        <ul class="tab-list">
+                            <li class="tab active"><a href="#tab2-3">텍스트탭</a></li>
+                            <li class="tab"><a href="#tab2-4">텍스트탭</a></li>
+                            <li class="tab"><a href="#tab2-5">텍스트탭</a></li>
+                            <li class="tab"><a href="#tab2-6">텍스트탭</a></li>
+                            <li class="tab"><a href="#tab2-7">텍스트탭</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-panels mt-20 mb-20">
+                    <div id="tab2-3" class="tab-panel active"><h2>탭내용입니다. 333</h2></div>
+                    <div id="tab2-4" class="tab-panel"><h2>탭내용입니다. 444</h2></div>
+                    <div id="tab2-5" class="tab-panel"><h2>탭내용입니다. 555</h2></div>
+                    <div id="tab2-6" class="tab-panel"><h2>탭내용입니다. 666</h2></div>
+                    <div id="tab2-7" class="tab-panel"><h2>탭내용입니다. 777</h2></div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="flex mt-10">
-      <div class="col-2">
-        <div class="fs-20">Line</div>
-      </div>
-      <div class="col-2">
-        <div class="tab-line-menu ui-tab act-tab">
-          <div class="tab-inner">
-            <i class="tab-line" aria-hidden="true"></i>
-            <ul class="tab-list">
-              <li class="tab active"><a href="#tab2-1">텍스트탭</a></li>
-              <li class="tab"><a href="#tab2-2">텍스트탭</a></li>
-            </ul>
-          </div>
+        <div class="flex mt-10" style="align-items: center">
+            <div class="col-2">
+                <div class="fs-20">Box</div>
+            </div>
+            <div class="col-2">
+                <div class="tab-box-menu ui-tab act-tab">
+                    <div class="tab-inner">
+                        <i class="tab-line" aria-hidden="true"></i>
+                        <ul class="tab-list">
+                            <li class="tab active"><a href="#tab3-1">탭박스</a></li>
+                            <li class="tab"><a href="#tab3-2">탭박스</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-panels mt-20 mb-20">
+                    <div id="tab3-1" class="tab-panel active"><h2>탭내용입니다. 111</h2></div>
+                    <div id="tab3-2" class="tab-panel"><h2>탭내용입니다. 222</h2></div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="tab-box-menu ui-tab has-bg">
+                    <div class="tab-inner deal-scroll">
+                        <i class="tab-line" aria-hidden="true"></i>
+                        <ul class="tab-list">
+                            <li class="tab active"><a href="#tab3-3">탭박스</a></li>
+                            <li class="tab"><a href="#tab3-4">탭박스</a></li>
+                            <li class="tab"><a href="#tab3-5">탭박스</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-panels mt-20 mb-20">
+                    <div id="tab3-3" class="tab-panel active"><h2>탭내용입니다. 333</h2></div>
+                    <div id="tab3-4" class="tab-panel"><h2>탭내용입니다. 444</h2></div>
+                    <div id="tab3-5" class="tab-panel"><h2>탭내용입니다. 555</h2></div>
+                </div>
+            </div>
         </div>
-        <div class="tab-panels mt-20 mb-20">
-          <div id="tab2-1" class="tab-panel active"><h2>탭내용입니다. 111</h2></div>
-          <div id="tab2-2" class="tab-panel"><h2>탭내용입니다. 222</h2></div>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="tab-line-menu ui-tab act-tab">
-          <div class="tab-inner deal-scroll" style="width:300px;">         
-            <i class="tab-line" aria-hidden="true"></i>
-            <ul class="tab-list">             
-              <li class="tab active"><a href="#tab2-3">텍스트탭</a></li>
-              <li class="tab"><a href="#tab2-4">텍스트탭</a></li>
-              <li class="tab"><a href="#tab2-5">텍스트탭</a></li>
-              <li class="tab"><a href="#tab2-6">텍스트탭</a></li>
-              <li class="tab"><a href="#tab2-7">텍스트탭</a></li>
-            </ul>
-          </div>
-        </div>        
-        <div class="tab-panels mt-20 mb-20">
-          <div id="tab2-3" class="tab-panel active"><h2>탭내용입니다. 333</h2></div>
-          <div id="tab2-4" class="tab-panel"><h2>탭내용입니다. 444</h2></div>
-          <div id="tab2-5" class="tab-panel"><h2>탭내용입니다. 555</h2></div>
-          <div id="tab2-6" class="tab-panel"><h2>탭내용입니다. 666</h2></div>
-          <div id="tab2-7" class="tab-panel"><h2>탭내용입니다. 777</h2></div>
-        </div>
-      </div>
-    </div>
-    <div class="flex mt-10" style="align-items: center">
-      <div class="col-2">
-        <div class="fs-20">Box</div>
-      </div>
-      <div class="col-2">
-        <div class="tab-box-menu ui-tab act-tab">        
-          <div class="tab-inner">
-            <i class="tab-line" aria-hidden="true"></i>
-            <ul class="tab-list">
-              <li class="tab active"><a href="#tab3-1">탭박스</a></li>
-              <li class="tab"><a href="#tab3-2">탭박스</a></li>             
-            </ul>
-          </div>
-        </div>
-        <div class="tab-panels mt-20 mb-20">
-          <div id="tab3-1" class="tab-panel active"><h2>탭내용입니다. 111</h2></div>
-          <div id="tab3-2" class="tab-panel"><h2>탭내용입니다. 222</h2></div>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="tab-box-menu ui-tab has-bg ">
-          <div class="tab-inner deal-scroll">         
-            <i class="tab-line" aria-hidden="true"></i>
-            <ul class="tab-list">    
-              <li class="tab active"><a href="#tab3-3">탭박스</a></li>
-              <li class="tab"><a href="#tab3-4">탭박스</a></li>         
-              <li class="tab"><a href="#tab3-5">탭박스</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="tab-panels mt-20 mb-20">
-          <div id="tab3-3" class="tab-panel active"><h2>탭내용입니다. 333</h2></div>
-          <div id="tab3-4" class="tab-panel"><h2>탭내용입니다. 444</h2></div>
-          <div id="tab3-5" class="tab-panel"><h2>탭내용입니다. 555</h2></div>
-        </div>
-      </div>
-    </div>      
-    <script>     
-    // $(document).on('click', '.act-tab a', function (e) {      
-    //   e.preventDefault();
-    //   const $this = $(this);
-    //   const $href = $this.attr('href');
-    //   const $closest = $this.closest('.uact-tab');
-    //   const $siblings = $closest.data('target');      
-    //   const $tab = $(this).closest('.tab').length ? $(this).closest('.tab') : $(this).closest('li');
-    //   const $tabInner = $tab.closest('.tab-inner');
-    //   ui.tab.tabActive($this);
-    //   if ($tabInner.parent().hasClass('tab-scroll')) {
-    //     ui.tab.panelActive($href, $siblings, true, true);
-    //   } else {
-    //     ui.tab.panelActive($href, $siblings, true);
-    //   }    
-    // });
-    </script>
-</body>
+        <script>
+            // $(document).on('click', '.act-tab a', function (e) {
+            //   e.preventDefault();
+            //   const $this = $(this);
+            //   const $href = $this.attr('href');
+            //   const $closest = $this.closest('.uact-tab');
+            //   const $siblings = $closest.data('target');
+            //   const $tab = $(this).closest('.tab').length ? $(this).closest('.tab') : $(this).closest('li');
+            //   const $tabInner = $tab.closest('.tab-inner');
+            //   ui.tab.tabActive($this);
+            //   if ($tabInner.parent().hasClass('tab-scroll')) {
+            //     ui.tab.panelActive($href, $siblings, true, true);
+            //   } else {
+            //     ui.tab.panelActive($href, $siblings, true);
+            //   }
+            // });
+        </script>
+    </body>
 </html>

@@ -1,111 +1,106 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="format-detection" content="telephone=no">
-    <title>Layout_Page</title>
-    <link rel="stylesheet" href="../../resources/css/reset.min.css">
-    <link rel="stylesheet" href="../../resources/css/common.min.css">
-    <script src="../../resources/js/lib/jquery-3.7.0.min.js"></script>
-    <script src="../../resources/js/lib/jquery-ui.min.js"></script>
-    <script src="../../resources/js/common.js"></script>
-    <style>
-    </style>
-</head>
-<body>
-    <div class="pd-20">
-        <h1 class="fwb fs-24">Selectbox</h1>
-        <ul>
-            <li class="mt-4 fs-12">1. sort버튼 누르면 바뀌는 정렬에 따른 이미지가 없음</li>
-            <li class="mt-4 fs-12">2. 셀렉트는 포커스가 없는건지 아니면 인풋이랑 동일 디자인..?</li>
-            <li class="mt-4 fs-12">3. 드롭다운에 백그라운드는 hover 스타일인지 선택시 스타일인지.. 모바일이면 hover 안되니까</li>
-        </ul>
-        <div class="flex">
-                    <div class="pd-20">
-            <div class="input-wrap select-wrap">
-                <div class="selectbox">
-                    <button type="button" class="label">최신순</button>
-                    <ul class="dropdown">
-                        <li class="option">드롭다운1</li>
-                        <li class="option">드롭다운2</li>
-                        <li class="option">드롭다운3</li>
-                        <li class="option">드롭다운4</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>Layout_Page</title>
+        <link rel="stylesheet" href="../../resources/css/common.min.css" />
+        <script src="../../resources/js/lib/jquery-3.7.0.min.js"></script>
+        <script src="../../resources/js/lib/jquery-ui.min.js"></script>
+        <script src="../../resources/js/common.js"></script>
+        <style></style>
+    </head>
+    <body>
         <div class="pd-20">
-            <div class="input-wrap select-wrap">
-                <button type="button" class="btn-filter"></button>
-                <div class="selectbox">
-                    <button type="button" class="label">최신순</button>
-                    <ul class="dropdown">
-                        <li class="option">드롭다운1</li>
-                        <li class="option">드롭다운2</li>
-                        <li class="option">드롭다운3</li>
-                        <li class="option">드롭다운4</li>
-                    </ul>
+            <h1 class="fwb fs-24">Selectbox</h1>
+            <ul>
+                <li class="mt-4 fs-12">1. sort버튼 누르면 바뀌는 정렬에 따른 이미지가 없음</li>
+                <li class="mt-4 fs-12">2. 셀렉트는 포커스가 없는건지 아니면 인풋이랑 동일 디자인..?</li>
+                <li class="mt-4 fs-12">3. 드롭다운에 백그라운드는 hover 스타일인지 선택시 스타일인지.. 모바일이면 hover 안되니까</li>
+            </ul>
+            <div class="flex">
+                <div class="pd-20">
+                    <div class="input-wrap select-wrap">
+                        <div class="selectbox">
+                            <button type="button" class="label">최신순</button>
+                            <ul class="dropdown">
+                                <li class="option">드롭다운1</li>
+                                <li class="option">드롭다운2</li>
+                                <li class="option">드롭다운3</li>
+                                <li class="option">드롭다운4</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pd-20">
+                    <div class="input-wrap select-wrap">
+                        <button type="button" class="btn-filter"></button>
+                        <div class="selectbox">
+                            <button type="button" class="label">최신순</button>
+                            <ul class="dropdown">
+                                <li class="option">드롭다운1</li>
+                                <li class="option">드롭다운2</li>
+                                <li class="option">드롭다운3</li>
+                                <li class="option">드롭다운4</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
+    </body>
+    <script>
+        function selectbox() {
+            const labelBtns = document.querySelectorAll('.selectbox .label');
 
-    </div>
-</body>
-<script>
- function selectbox() {
-        const labelBtns = document.querySelectorAll('.selectbox .label');
-
-        labelBtns.forEach(function(labelBtn) {
-            labelBtn.addEventListener('click', handleDropdownToggle);
-            labelBtn.addEventListener('touchstart', handleDropdownToggle);
-        });
-    }
-
-    function handleDropdownToggle(event) {
-        const dropdown = this.nextElementSibling;
-        const allDropdowns = document.querySelectorAll('.selectbox .dropdown');
-
-        // Close other dropdowns
-        allDropdowns.forEach(function(dropdown) {
-            dropdown.classList.remove('on');
-            dropdown.style.bottom = '';
-        });
-
-        dropdown.classList.toggle('on');
-
-        if (dropdown.classList.contains('on')) {
-            const rect = dropdown.getBoundingClientRect();
-            const dropdownHeight = rect.height;
-            dropdown.style.bottom = '-' + dropdownHeight + 'px';
-        } else {
-            dropdown.style.bottom = '';
+            labelBtns.forEach(function (labelBtn) {
+                labelBtn.addEventListener('click', handleDropdownToggle);
+                labelBtn.addEventListener('touchstart', handleDropdownToggle);
+            });
         }
 
-        event.stopPropagation();
-    }
+        function handleDropdownToggle(event) {
+            const dropdown = this.nextElementSibling;
+            const allDropdowns = document.querySelectorAll('.selectbox .dropdown');
 
-    function handleOptionSelect(event) {
-        const dropdown = this.parentElement;
-        dropdown.classList.remove('on');
-        dropdown.style.bottom = '';
+            // Close other dropdowns
+            allDropdowns.forEach(function (dropdown) {
+                dropdown.classList.remove('on');
+                dropdown.style.bottom = '';
+            });
 
-        // Handle selected option logic
-        // ...
+            dropdown.classList.toggle('on');
 
-        event.stopPropagation();
-    }
+            if (dropdown.classList.contains('on')) {
+                const rect = dropdown.getBoundingClientRect();
+                const dropdownHeight = rect.height;
+                dropdown.style.bottom = '-' + dropdownHeight + 'px';
+            } else {
+                dropdown.style.bottom = '';
+            }
 
-    const optionItems = document.querySelectorAll('.selectbox .option');
-    optionItems.forEach(function(optionItem) {
-        optionItem.addEventListener('click', handleOptionSelect);
-        optionItem.addEventListener('touchstart', handleOptionSelect);
-    });
+            event.stopPropagation();
+        }
 
+        function handleOptionSelect(event) {
+            const dropdown = this.parentElement;
+            dropdown.classList.remove('on');
+            dropdown.style.bottom = '';
 
-    selectbox();
+            // Handle selected option logic
+            // ...
 
-</script>
+            event.stopPropagation();
+        }
+
+        const optionItems = document.querySelectorAll('.selectbox .option');
+        optionItems.forEach(function (optionItem) {
+            optionItem.addEventListener('click', handleOptionSelect);
+            optionItem.addEventListener('touchstart', handleOptionSelect);
+        });
+
+        selectbox();
+    </script>
 </html>

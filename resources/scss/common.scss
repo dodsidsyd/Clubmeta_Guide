@@ -1,4 +1,21 @@
 @charset "UTF-8";
 
-@import './helpers/functions', './helpers/mixins', './helpers/variables', './base/all', './components/card', './components/buttons', './components/header', './components/navigation', './components/input', './components/tabs', './components/textarea', './components/selectbox', './components/pagination', './components/checkbox';
+// @import url(./lib/jquery-ui.min.css);
+@import url(./lib/swiper-bundle.min.css);
 
+@import './helpers/functions', 
+        './helpers/mixins', 
+        './helpers/variables', 
+        './base/font', 
+        './base/reset',
+        './base/base', 
+        './components/card', 
+        './components/buttons', 
+        './components/header', 
+        './components/navigation', 
+        './components/input', 
+        './components/tabs', 
+        './components/textarea', 
+        './components/selectbox', 
+        './components/pagination', 
+        './components/checkbox';

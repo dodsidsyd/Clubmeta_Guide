@@ -1,0 +1,7 @@
+**/node_modules/*
+**/*.min.*
+**/lib/*
+**/mail/*
+_font.scss
+_reset.scss
+common.scss
