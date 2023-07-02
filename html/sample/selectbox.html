@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="HandheldFriendly" content="true">
     <meta name="format-detection" content="telephone=no">
-    <title>Layout_Page</title>
+    <title>Selectbox_Page</title>
     <link rel="stylesheet" href="../../resources/css/reset.min.css">
     <link rel="stylesheet" href="../../resources/css/common.min.css">
     <script src="../../resources/js/lib/jquery-3.7.0.min.js"></script>
@@ -23,35 +23,48 @@
             <li class="mt-4 fs-12">3. 드롭다운에 백그라운드는 hover 스타일인지 선택시 스타일인지.. 모바일이면 hover 안되니까</li>
         </ul>
         <div class="flex">
-                    <div class="pd-20">
-            <div class="input-wrap select-wrap">
-                <div class="selectbox">
-                    <button type="button" class="label">최신순</button>
-                    <ul class="dropdown">
-                        <li class="option">드롭다운1</li>
-                        <li class="option">드롭다운2</li>
-                        <li class="option">드롭다운3</li>
-                        <li class="option">드롭다운4</li>
-                    </ul>
+            <div class="pd-20">
+                <div class="input-wrap select-wrap">
+                    <div class="selectbox">
+                        <select title="선택" class="label" style="display: none;">
+                            <option value="">최신순</option>
+                            <option value="1">드롭다운1</option>
+                            <option value="2">드롭다운2</option>
+                            <option value="3">드롭다운3</option>
+                            <option value="4">드롭다운4</option>
+                        </select>
+                        <button type="button" class="label">최신순</button>
+                        <div class="dropdown">
+                            <a class="option" data-val="1" role="button">드롭다운1</a>
+                            <a class="option" data-val="2" role="button">드롭다운2</a>
+                            <a class="option" data-val="3" role="button">드롭다운3</a>
+                            <a class="option" data-val="4" role="button">드롭다운4</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pd-20">
+                <div class="input-wrap select-wrap">
+                    <button type="button" class="btn-filter"></button>
+                    <div class="selectbox">
+                        <select title="선택" class="label" style="display: none;">
+                            <option value="">최신순</option>
+                            <option value="1">드롭다운1</option>
+                            <option value="2">드롭다운2</option>
+                            <option value="3">드롭다운3</option>
+                            <option value="4">드롭다운4</option>
+                        </select>
+                        <button type="button" class="label">최신순</button>
+                        <div class="dropdown">
+                            <a class="option" data-val="1" role="button">드롭다운1</a>
+                            <a class="option" data-val="2" role="button">드롭다운2</a>
+                            <a class="option" data-val="3" role="button">드롭다운3</a>
+                            <a class="option" data-val="4" role="button">드롭다운4</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="pd-20">
-            <div class="input-wrap select-wrap">
-                <button type="button" class="btn-filter"></button>
-                <div class="selectbox">
-                    <button type="button" class="label">최신순</button>
-                    <ul class="dropdown">
-                        <li class="option">드롭다운1</li>
-                        <li class="option">드롭다운2</li>
-                        <li class="option">드롭다운3</li>
-                        <li class="option">드롭다운4</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        </div>
-
     </div>
 </body>
 <script>
