@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -39,10 +40,58 @@
                             <a class="option" data-val="2" role="button">드롭다운2</a>
                             <a class="option" data-val="3" role="button">드롭다운3</a>
                             <a class="option" data-val="4" role="button">드롭다운4</a>
+=======
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>Layout_Page</title>
+        <link rel="stylesheet" href="../../resources/css/common.min.css" />
+        <script src="../../resources/js/lib/jquery-3.7.0.min.js"></script>
+        <script src="../../resources/js/lib/jquery-ui.min.js"></script>
+        <script src="../../resources/js/common.js"></script>
+        <style></style>
+    </head>
+    <body>
+        <div class="pd-20">
+            <h1 class="fwb fs-24">Selectbox</h1>
+            <ul>
+                <li class="mt-4 fs-12">1. sort버튼 누르면 바뀌는 정렬에 따른 이미지가 없음</li>
+                <li class="mt-4 fs-12">2. 셀렉트는 포커스가 없는건지 아니면 인풋이랑 동일 디자인..?</li>
+                <li class="mt-4 fs-12">3. 드롭다운에 백그라운드는 hover 스타일인지 선택시 스타일인지.. 모바일이면 hover 안되니까</li>
+            </ul>
+            <div class="flex">
+                <div class="pd-20">
+                    <div class="input-wrap select-wrap">
+                        <div class="selectbox">
+                            <button type="button" class="label">최신순</button>
+                            <ul class="dropdown">
+                                <li class="option">드롭다운1</li>
+                                <li class="option">드롭다운2</li>
+                                <li class="option">드롭다운3</li>
+                                <li class="option">드롭다운4</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pd-20">
+                    <div class="input-wrap select-wrap">
+                        <button type="button" class="btn-filter"></button>
+                        <div class="selectbox">
+                            <button type="button" class="label">최신순</button>
+                            <ul class="dropdown">
+                                <li class="option">드롭다운1</li>
+                                <li class="option">드롭다운2</li>
+                                <li class="option">드롭다운3</li>
+                                <li class="option">드롭다운4</li>
+                            </ul>
+>>>>>>> ed8760aa0e4ccedd2f395b8a657030275b46f8bb
                         </div>
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             <div class="pd-20">
                 <div class="input-wrap select-wrap">
                     <button type="button" class="btn-filter"></button>
@@ -95,30 +144,252 @@
             dropdown.style.bottom = '-' + dropdownHeight + 'px';
         } else {
             dropdown.style.bottom = '';
+=======
+            <br />
+            <br />
+            <br />
+            <h1>ahj</h1>
+            <br />
+            <div class="select">
+                <select title="옵션선택">
+                    <option value="">선택하세요</option>
+                    <option value="1">옵션1</option>
+                    <option value="2">옵션2</option>
+                    <option value="3">옵션3</option>
+                    <option value="4">옵션4</option>
+                    <option value="5">옵션5</option>
+                </select>
+            </div>
+            <div class="select">
+                <select title="옵션선택">
+                    <option value="">선택하세요</option>
+                    <option value="1">옵션1</option>
+                    <option value="2">옵션2</option>
+                    <option value="3">옵션3</option>
+                    <option value="4">옵션4옵션4옵션4옵션4옵션4</option>
+                    <option value="5">옵션5옵션5옵션5옵션5</option>
+                </select>
+            </div>
+            <div class="select">
+                <select title="옵션선택">
+                    <option value="">선택하세요</option>
+                    <option value="1">옵션1</option>
+                    <option value="2">옵션2</option>
+                    <option value="3">옵션3</option>
+                    <option value="4">옵션4옵션4옵션4옵션4옵션4</option>
+                    <option value="5">옵션5옵션5옵션5옵션5</option>
+                </select>
+            </div>
+            <br />
+            <br />
+            <div class="select">
+                <select title="옵션선택" class="select-pop">
+                    <option value="">팝업으로 선택</option>
+                    <option value="1">옵션1</option>
+                    <option value="2">옵션2</option>
+                    <option value="3">옵션3</option>
+                    <option value="4">옵션4옵션4옵션4옵션4옵션4</option>
+                    <option value="5">옵션5옵션5옵션5옵션5</option>
+                </select>
+            </div>
+            <br />
+            <br />
+            <div style="display: flex; justify-content: center; align-items: center; background: #ddd; height: 200vh">스크롤 확인용 임시 박스</div>
+        </div>
+    </body>
+    <script>
+        function selectbox() {
+            const labelBtns = document.querySelectorAll('.selectbox .label');
+
+            labelBtns.forEach(function (labelBtn) {
+                labelBtn.addEventListener('click', handleDropdownToggle);
+                labelBtn.addEventListener('touchstart', handleDropdownToggle);
+            });
+>>>>>>> ed8760aa0e4ccedd2f395b8a657030275b46f8bb
         }
 
-        event.stopPropagation();
-    }
+        function handleDropdownToggle(event) {
+            const dropdown = this.nextElementSibling;
+            const allDropdowns = document.querySelectorAll('.selectbox .dropdown');
 
-    function handleOptionSelect(event) {
-        const dropdown = this.parentElement;
-        dropdown.classList.remove('on');
-        dropdown.style.bottom = '';
+            // Close other dropdowns
+            allDropdowns.forEach(function (dropdown) {
+                dropdown.classList.remove('on');
+                dropdown.style.bottom = '';
+            });
 
-        // Handle selected option logic
-        // ...
+            dropdown.classList.toggle('on');
 
-        event.stopPropagation();
-    }
+            if (dropdown.classList.contains('on')) {
+                const rect = dropdown.getBoundingClientRect();
+                const dropdownHeight = rect.height;
+                dropdown.style.bottom = '-' + dropdownHeight + 'px';
+            } else {
+                dropdown.style.bottom = '';
+            }
 
-    const optionItems = document.querySelectorAll('.selectbox .option');
-    optionItems.forEach(function(optionItem) {
-        optionItem.addEventListener('click', handleOptionSelect);
-        optionItem.addEventListener('touchstart', handleOptionSelect);
-    });
+            event.stopPropagation();
+        }
 
+        function handleOptionSelect(event) {
+            const dropdown = this.parentElement;
+            dropdown.classList.remove('on');
+            dropdown.style.bottom = '';
 
-    selectbox();
+            // Handle selected option logic
+            // ...
 
-</script>
+            event.stopPropagation();
+        }
+
+        const optionItems = document.querySelectorAll('.selectbox .option');
+        optionItems.forEach(function (optionItem) {
+            optionItem.addEventListener('click', handleOptionSelect);
+            optionItem.addEventListener('touchstart', handleOptionSelect);
+        });
+
+        selectbox();
+
+        //ahj
+        ui.select = {
+            className: {
+                wrap: '.select',
+                btn: '.btn-select',
+                btnActive: '.open',
+                optionsWrap: '.select-options',
+                option: '.select-option',
+                selectPopClass: '.select-pop',
+                selectPopWrap: '.pop-select'
+            },
+            init: function () {
+                ui.select.ready();
+                ui.select.UI();
+            },
+            ready: function () {
+                $(ui.select.className.wrap).each(function () {
+                    const $this = $(this);
+                    const $sel = $this.find('select');
+                    if (!$this.find(ui.select.className.btn).length) {
+                        const $title = $sel.attr('title') || '선택';
+                        const $btn = `<button class="${ui.select.className.btn.slice(1)}" title="${$title}"></button>`;
+                        $sel.hide();
+                        $this.append($btn);
+                        ui.select.setBtnText($sel);
+                    }
+                });
+            },
+            setBtnText(elem) {
+                const $el = $(elem);
+                const $btn = $el.siblings(ui.select.className.btn);
+                if (!$el.length || !$btn.length) return;
+                const $selectedTxt = $el.find(':selected').text();
+                $btn.text($selectedTxt);
+            },
+            makeOptions: function (select, btn) {
+                const $select = $(select);
+                const $btn = $(btn);
+                if (!$select.children().length) return;
+                const isPop = $select.hasClass(ui.select.className.selectPopClass.slice(1));
+
+                let $options = $(ui.select.className.optionsWrap);
+                if ($options.length) ui.select.reset();
+
+                const $title = $btn.attr('title');
+                let $optionHtml = '';
+                if (isPop) $optionHtml += '<div class="' + ui.select.className.selectPopWrap.slice(1) + '">';
+                $optionHtml += '<div class="' + ui.select.className.optionsWrap.slice(1) + '">';
+                $optionHtml += '<h1>' + $title + '</h1>';
+                $optionHtml += '<ul>';
+                $select.children().each(function () {
+                    const $this = $(this);
+                    const $val = $this.attr('value');
+                    const $text = $this.text();
+                    const $seletedClass = $this.prop('selected') ? ' selected' : '';
+                    $optionHtml += '<li><button class="' + ui.select.className.option.slice(1) + $seletedClass + '" data-val="' + $val + '">' + $text + '</button></li>';
+                });
+                $optionHtml += '</ul>';
+                $optionHtml += '</div>';
+                if (isPop) $optionHtml += '</div>';
+
+                $('body').append($optionHtml);
+                $options = $(ui.select.className.optionsWrap);
+                $options.data('select', select);
+                if (!isPop) {
+                    let $top = $btn.offset().top + $btn.outerHeight();
+                    let $left = $btn.offset().left;
+                    const $width = $btn.outerWidth();
+                    if ($top + $options.outerHeight() > $(window).scrollTop() + $(window).height() + 20) {
+                        $top = $top - $btn.outerHeight() - $options.outerHeight() - 2;
+                    }
+                    if ($left + $options.outerWidth() > $(window).scrollLeft() + $(window).width()) {
+                        $left = $left + $btn.outerWidth() - $options.outerWidth();
+                    }
+                    $options.css({
+                        top: $top + 2,
+                        left: $left,
+                        minWidth: $width
+                    });
+                }
+            },
+            reset: function () {
+                const $options = $(ui.select.className.optionsWrap);
+                if (!$options.length) return;
+                $options.each(function () {
+                    const $this = $(this);
+                    const $select = $($this.data('select'));
+                    if (!$select) return;
+                    const $btn = $select.siblings(ui.select.className.btn);
+                    if ($btn.length) $btn.removeClass(ui.select.className.btnActive.slice(1));
+                    const $wrap = $this.closest(ui.select.className.selectPopWrap).length ? $this.closest(ui.select.className.selectPopWrap) : $this;
+                    $wrap.remove();
+                });
+
+                const $btn = $(ui.select.className.btn + ui.select.className.btnActive);
+                if ($btn.length) $btn.removeClass(ui.select.className.btnActive.slice(1));
+            },
+            UI: function () {
+                //select change
+                $(document).on('change', ui.select.className.wrap + ' select', function (e) {
+                    ui.select.setBtnText(this);
+                });
+
+                //btn
+                $(document).on('click', ui.select.className.btn, function (e) {
+                    e.preventDefault();
+                    const $this = $(this);
+                    const $select = $this.siblings('select');
+                    if ($this.hasClass(ui.select.className.btnActive.slice(1))) {
+                        ui.select.reset();
+                    } else {
+                        $this.addClass(ui.select.className.btnActive.slice(1));
+                        ui.select.makeOptions($select, $this);
+                    }
+                });
+
+                //option
+                $(document).on('click', ui.select.className.option, function (e) {
+                    e.preventDefault();
+                    const $this = $(this);
+                    const $val = $this.data('val');
+                    const $closest = $this.closest(ui.select.className.optionsWrap);
+                    const $select = $closest.data('select');
+                    const $btn = $select.siblings(ui.select.className.btn);
+                    $select.val($val).change();
+                    ui.select.reset();
+                    $btn.removeClass(ui.select.className.btnActive.slice(1)).focus();
+                });
+
+                //out click
+                $(document)
+                    .on('click touchend', function (e) {
+                        e.preventDefault();
+                        ui.select.reset();
+                    })
+                    .on('click touchend', ui.select.className.wrap + ',' + ui.select.className.optionsWrap, function (e) {
+                        e.stopPropagation();
+                    });
+            }
+        };
+        ui.select.init();
+    </script>
 </html>

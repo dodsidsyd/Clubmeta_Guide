@@ -1,74 +1,73 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="format-detection" content="telephone=no">
-    <title>pagination</title>
-    <link rel="stylesheet" href="../../resources/css/reset.min.css">
-    <link rel="stylesheet" href="../../resources/css/common.min.css">
-    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
-    <script src="../../resources/js/lib/jquery-3.7.0.min.js"></script>
-    <script src="../../resources/js/lib/jquery-ui.min.js"></script>
-    <script src="../../resources/js/lib/swiper-bundle.min.js"></script>
-    <script src="../../resources/js/common.js"></script>
-</head>
-<body>  
-    <div class="pd-20">
-      <h1>pagination</h1>
-    </div>   
-    <div class="flex mt-10">
-      <div class="col-2 pl-20">
-        <div class="fs-20">indicator</div>
-      </div>      
-      <div class="col-8">
-        <div class="swiper">          
-          <div class="swiper-wrapper">            
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>            
-          </div>          
-          <div class="swiper-pagination"></div>       
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-scrollbar"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>pagination</title>
+        <link rel="stylesheet" href="../../resources/css/common.min.css" />
+        <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css" />
+        <script src="../../resources/js/lib/jquery-3.7.0.min.js"></script>
+        <script src="../../resources/js/lib/jquery-ui.min.js"></script>
+        <script src="../../resources/js/lib/swiper-bundle.min.js"></script>
+        <script src="../../resources/js/common.js"></script>
+    </head>
+    <body>
+        <div class="pd-20">
+            <h1>pagination</h1>
         </div>
-      </div>
-    </div>
-    <div class="flex mt-10">
-      <div class="col-2 pl-20">
-        <div class="fs-20">Prev / Next</div>
-      </div>
-      <div class="col-8">
-        <div class="swiper">          
-          <div class="swiper-wrapper">            
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>            
-          </div>          
-          <div class="swiper-pagination"></div>       
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-scrollbar"></div>
+        <div class="flex mt-10">
+            <div class="col-2 pl-20">
+                <div class="fs-20">indicator</div>
+            </div>
+            <div class="col-8">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>    
-    <script>
-      const swiper = new Swiper('.swiper', {  
-        direction: 'horizontal',
-        loop: true,  
-        pagination: {
-          el: '.swiper-pagination',
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }, 
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
-      });
-    </script>
-</body>
+        <div class="flex mt-10">
+            <div class="col-2 pl-20">
+                <div class="fs-20">Prev / Next</div>
+            </div>
+            <div class="col-8">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                direction: 'horizontal',
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination'
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                scrollbar: {
+                    el: '.swiper-scrollbar'
+                }
+            });
+        </script>
+    </body>
 </html>
