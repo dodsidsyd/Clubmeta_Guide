@@ -96,8 +96,9 @@
                     <option value="5">옵션5옵션5옵션5옵션5</option>
                 </select>
             </div>
-
-            <div style="background: #000; height: 500vh"></div>
+            <br />
+            <br />
+            <div style="display: flex; justify-content: center; align-items: center; background: #ddd; height: 200vh">스크롤 확인용 임시 박스</div>
         </div>
     </body>
     <script>
@@ -276,9 +277,9 @@
                     const $closest = $this.closest(ui.select.className.optionsWrap);
                     const $select = $closest.data('select');
                     const $btn = $select.siblings(ui.select.className.btn);
-                    $btn.removeClass(ui.select.className.btnActive.slice(1));
                     $select.val($val).change();
                     ui.select.reset();
+                    $btn.removeClass(ui.select.className.btnActive.slice(1)).focus();
                 });
 
                 //out click
