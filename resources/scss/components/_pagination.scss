@@ -1,0 +1,63 @@
+.swiper.autoplay {
+  position:relative;
+  .swiper-slide {
+    height: 20rem;
+  } 
+  .swiper-pagination.swiper-pagination-custom {
+    display:flex;    
+    justify-content:center;
+    align-items:center;
+    .swiper-pagination-fraction {
+      order:2;
+      width:fit-content;      
+      padding:.1rem .8rem;
+      background:$form-bColor;
+      box-sizing:border-box;
+      box-shadow:0px 2px 6px 0px rgba(20, 36, 91, 0.12);box-shadow: 0px 2px 6px 0px rgba(20, 36, 91, 0.12);
+      border-radius:.4rem;
+      font-size:.8rem;
+      line-height:1;
+      color:#404040;    
+      .swiper-pagination-current {
+        color:$main-color;
+      }
+    }
+    .swiper-pagination-bullets {
+      order:1;
+      margin-right:.8rem;
+      font-size:0;
+      > span {
+        display:inline-block;
+        width:.8rem;
+        height:.8rem;
+        border-radius:.5rem;
+        cursor:pointer;
+      }
+      .swiper-pagination-bullet {
+        background:$main-light-color;        
+        // background:$form-bColor; /* 수정필요 */        
+        &:not(:last-child) {
+          margin-right:.8rem;
+        }
+      }
+      .swiper-pagination-bullet-active {        
+        background:$main-color !important;
+      }    
+    }
+  }
+  .pause {
+    position:absolute;
+    z-index:10;   
+    top:var(--swiper-pagination-top,auto);        
+    bottom:var(--swiper-pagination-bottom,.4rem);
+    width:2rem;   
+    height:2rem;
+    text-indent:-9999rem;
+    background:url(/resources/images/pause.png) center / contain  no-repeat;    
+    border-radius:50%;
+    box-shadow:0 .2rem .6rem 0 rgba(20, 36, 91, 0.12);
+    &.play {
+      background:url(/resources/images/play.png) center / contain no-repeat;
+    }
+  }  
+}
