@@ -53,11 +53,11 @@
     width:2rem;   
     height:2rem;
     text-indent:-9999rem;
-    background:url(/resources/images/pause.png) center / contain  no-repeat;    
+    background:url(../../images/pause.png) center / contain  no-repeat;    
     border-radius:50%;
     box-shadow:0 .2rem .6rem 0 rgba(20, 36, 91, 0.12);
     &.play {
-      background:url(/resources/images/play.png) center / contain no-repeat;
+      background:url(../../images/play.png) center / contain no-repeat;
     }
   }  
 }
