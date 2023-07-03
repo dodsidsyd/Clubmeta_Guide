@@ -1,1 +1,105 @@
 //radio
+.radio{
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    i{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1.6rem;
+        height: 1.6rem;
+        border: 1px solid #b7b7b7;
+        border-radius: 1.6rem;
+        box-sizing: border-box;
+        &::after{
+            content: '';
+            position: absolute;
+            display: none;
+            left: 0.2rem;
+            top: 0.2rem;
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 0.8rem;
+        }
+    }
+    input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 15;
+        &:checked{
+            +i{
+                border: 2px solid $main-color;
+                &::after{
+                    content: '';
+                    display: inline-block;
+                    background-color: $main-color;
+                }
+            }
+        }
+        &:disabled{
+            +i{
+                border-color: #B7B7B7;
+                background-color: #B7B7B7;
+                &::after{
+                    content: '';
+                    left: 0.3rem;
+                    top: 0.3rem;
+                    display: inline-block;
+                    background-color: #707070;
+                }
+            }
+        }
+    }
+    .label{
+        font-size: $fs-16;
+        font-weight: $normal;
+        padding-left: 3rem;
+    }
+}
+.radio-wrap{
+    display: flex;
+    gap:1rem;
+    flex-wrap: wrap;
+    &.-col{
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+    }
+    &.-type2{
+        .radio{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 4.4rem;
+            padding: 0 1.6rem;
+            i{
+                width: 100%;
+                height: 100%;
+                border: 0;
+                box-shadow: 0 0.2rem 0.6rem rgba(20,36,91,0.12);
+                &::after{
+                    display: none;
+                }
+            }
+            input{
+                &:checked{
+                    +i{
+                        border: 1px solid $main-color;
+                        +.label{
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+            .label{
+                padding-left: 0;
+                color: #707070;
+            }
+        }
+    }
+}
