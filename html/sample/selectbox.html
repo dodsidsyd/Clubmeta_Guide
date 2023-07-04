@@ -87,60 +87,9 @@
             <br />
             <br />
             <div style="display: flex; justify-content: center; align-items: center; background: #ddd; height: 200vh">스크롤 확인용 임시 박스</div>
-        
+    </div>    
 </body>
     <script>
-        function selectbox() {
-            const labelBtns = document.querySelectorAll('.selectbox .label');
-
-            labelBtns.forEach(function (labelBtn) {
-                labelBtn.addEventListener('click', handleDropdownToggle);
-                labelBtn.addEventListener('touchstart', handleDropdownToggle);
-            });
-        }
-
-        function handleDropdownToggle(event) {
-            const dropdown = this.nextElementSibling;
-            const allDropdowns = document.querySelectorAll('.selectbox .dropdown');
-
-            // Close other dropdowns
-            allDropdowns.forEach(function (dropdown) {
-                dropdown.classList.remove('on');
-                dropdown.style.bottom = '';
-            });
-
-            dropdown.classList.toggle('on');
-
-            if (dropdown.classList.contains('on')) {
-                const rect = dropdown.getBoundingClientRect();
-                const dropdownHeight = rect.height;
-                dropdown.style.bottom = '-' + dropdownHeight + 'px';
-            } else {
-                dropdown.style.bottom = '';
-            }
-
-            event.stopPropagation();
-        }
-
-        function handleOptionSelect(event) {
-            const dropdown = this.parentElement;
-            dropdown.classList.remove('on');
-            dropdown.style.bottom = '';
-
-            // Handle selected option logic
-            // ...
-
-            event.stopPropagation();
-        }
-
-        const optionItems = document.querySelectorAll('.selectbox .option');
-        optionItems.forEach(function (optionItem) {
-            optionItem.addEventListener('click', handleOptionSelect);
-            optionItem.addEventListener('touchstart', handleOptionSelect);
-        });
-
-        selectbox();
-
         //ahj
         ui.select = {
             className: {
