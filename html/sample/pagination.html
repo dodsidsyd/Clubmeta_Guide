@@ -18,10 +18,10 @@
             <h1>pagination</h1>
         </div>
         <div class="flex mt-10">
-            <div class="col-2 pl-20">
+            <div class="col-2 pl-20 pr-40">
                 <div class="fs-20">indicator</div>
             </div>
-            <div class="col-8">
+            <div class="col-6">
                 <div class="swiper autoplay">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">Slide 1</div>
@@ -34,26 +34,41 @@
             </div>
         </div>
         <div class="flex mt-10">
-            <div class="col-2 pl-20">
-                <div class="fs-20">Prev / Next</div>
+            <div class="col-2 pl-20 pr-40">
+                <div class="fs-20"></div>
             </div>
-            <div class="col-8">
-                <!-- <div class="swiper">
+            <div class="col-6">
+                <div class="swiper autoplay">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">Slide 1</div>
                         <div class="swiper-slide">Slide 2</div>
                         <div class="swiper-slide">Slide 3</div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-scrollbar"></div>
-                </div> -->
+                    <div class="swiper-pagination"></div>                   
+                </div>
             </div>
         </div>
+        <div class="flex mt-10">
+          <div class="col-2 pl-20 pr-40">
+              <div class="fs-20">Prev / Next</div>
+          </div>
+          <div class="col-6">
+              <div class="swiper autoplay navigation">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">Slide 1</div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+                  </div>   
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>                  
+                  <!-- <div class="swiper-pagination"></div> -->
+                  <!-- <button class="pause">stop</button> -->
+              </div>
+          </div>
+      </div>
         <script>
           let autoplay = new Swiper('.swiper.autoplay', {          
-            autoplay:true,
+            autoplay:true,           
             pagination: {
               el: '.swiper-pagination',
               clickable: true,             
@@ -87,8 +102,48 @@
                   })                
               },
             },
-          });              
-         
+          });    
+          
+          let navigation = new Swiper('.swiper.navigation', {          
+            autoplay:true,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,             
+              type: 'custom',
+              renderCustom: function (swiper, current, total) {
+                return '<div class="swiper-pagination-fraction">' + '<span class="swiper-pagination-current">' + current + '</span>' + ' / ' + '<span class="swiper-pagination-total">' + total + '</span>' + '</div>' +
+                '<div class="swiper-pagination-bullets">' + 
+                    Array.from(swiper.slides).map(function (_, index) {
+                    return '<span class="' + (index === current - 1 ? 'swiper-pagination-bullet-active swiper-pagination-bullet' : 'swiper-pagination-bullet') + '"></span>';
+                    }).join('') +
+                '</div>';
+              },             
+            },     
+            on: {
+              init: function () {
+                let fraction = $('.swiper-pagination-fraction'),                  
+                  fractionWidth = fraction.outerWidth(),
+                  fractionOffset = fractionWidth + fraction.offset().left + 8;
+                  playbtn = $('.swiper.autoplay').find('.pause');                                                      
+
+                  playbtn.offset({left : fractionOffset})
+                  
+                  playbtn.on('click', function(e){                       
+                    if($(this).hasClass('play')){
+                      $(this).removeClass('play')
+                      autoplay.autoplay.start()
+                    }else{
+                      $(this).addClass('play')
+                      autoplay.autoplay.stop()
+                    }
+                  })                
+              },
+            },
+          }); 
         </script>
     </body>
 </html>

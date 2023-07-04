@@ -1,7 +1,7 @@
 .swiper.autoplay {
   position:relative;
   .swiper-slide {
-    height: 20rem;
+    height: 8rem; /* 임의로 설정 */
   } 
   .swiper-pagination.swiper-pagination-custom {
     display:flex;    
@@ -53,11 +53,30 @@
     width:2rem;   
     height:2rem;
     text-indent:-9999rem;
-    background:url(../../images/pause.png) center / contain  no-repeat;    
+    background:url(./../images/pause.png) center / contain  no-repeat;    
     border-radius:50%;
     box-shadow:0 .2rem .6rem 0 rgba(20, 36, 91, 0.12);
     &.play {
-      background:url(../../images/play.png) center / contain no-repeat;
+      background:url(./../images/play.png) center / contain no-repeat;
     }
   }  
+  &.navigation {
+    .swiper-button-prev, .swiper-button-next{
+      width:3.2rem;
+      height:3.2rem;
+      background:$form-bColor;
+      border-radius:.8rem;
+      box-shadow:0 .2rem .6rem 0 #14245B1F;
+    }
+    .swiper-button-prev {
+      background:url(./../images/arrow-left.png) center / 1.6rem 1.6rem no-repeat;
+    }
+    .swiper-button-next {
+      background:url(./../images/arrow-right.png) center / 1.6rem 1.6rem no-repeat;
+    }
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+      content:none;
+    }
+  }
 }
