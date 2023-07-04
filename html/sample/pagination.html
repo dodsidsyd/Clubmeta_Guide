@@ -22,7 +22,7 @@
                 <div class="fs-20">indicator</div>
             </div>
             <div class="col-6">
-                <div class="swiper autoplay">
+                <div class="swiper swiper-custom autoplay">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">Slide 1</div>
                         <div class="swiper-slide">Slide 2</div>
@@ -38,7 +38,7 @@
                 <div class="fs-20"></div>
             </div>
             <div class="col-6">
-                <div class="swiper autoplay">
+                <div class="swiper swiper-custom no-control">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">Slide 1</div>
                         <div class="swiper-slide">Slide 2</div>
@@ -53,7 +53,7 @@
               <div class="fs-20">Prev / Next</div>
           </div>
           <div class="col-6">
-              <div class="swiper autoplay navigation">
+              <div class="swiper swiper-custom navigation">
                   <div class="swiper-wrapper">
                       <div class="swiper-slide">Slide 1</div>
                       <div class="swiper-slide">Slide 2</div>
@@ -103,6 +103,23 @@
               },
             },
           });    
+
+          let noControl = new Swiper('.swiper.no-control', {          
+            autoplay:true,           
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,             
+              type: 'custom',
+              renderCustom: function (swiper, current, total) {
+                return '<div class="swiper-pagination-fraction">' + '<span class="swiper-pagination-current">' + current + '</span>' + ' / ' + '<span class="swiper-pagination-total">' + total + '</span>' + '</div>' +
+                '<div class="swiper-pagination-bullets">' + 
+                    Array.from(swiper.slides).map(function (_, index) {
+                    return '<span class="' + (index === current - 1 ? 'swiper-pagination-bullet-active swiper-pagination-bullet' : 'swiper-pagination-bullet') + '"></span>';
+                    }).join('') +
+                '</div>';
+              },             
+            },                 
+          });    
           
           let navigation = new Swiper('.swiper.navigation', {          
             autoplay:true,
@@ -122,27 +139,7 @@
                     }).join('') +
                 '</div>';
               },             
-            },     
-            on: {
-              init: function () {
-                let fraction = $('.swiper-pagination-fraction'),                  
-                  fractionWidth = fraction.outerWidth(),
-                  fractionOffset = fractionWidth + fraction.offset().left + 8;
-                  playbtn = $('.swiper.autoplay').find('.pause');                                                      
-
-                  playbtn.offset({left : fractionOffset})
-                  
-                  playbtn.on('click', function(e){                       
-                    if($(this).hasClass('play')){
-                      $(this).removeClass('play')
-                      autoplay.autoplay.start()
-                    }else{
-                      $(this).addClass('play')
-                      autoplay.autoplay.stop()
-                    }
-                  })                
-              },
-            },
+            },                
           }); 
         </script>
     </body>

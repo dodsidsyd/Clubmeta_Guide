@@ -1,4 +1,4 @@
-.swiper.autoplay {
+.swiper.swiper-custom {
   position:relative;
   .swiper-slide {
     height: 8rem; /* 임의로 설정 */
@@ -13,7 +13,7 @@
       padding:.1rem .8rem;
       background:$form-bColor;
       box-sizing:border-box;
-      box-shadow:0px 2px 6px 0px rgba(20, 36, 91, 0.12);box-shadow: 0px 2px 6px 0px rgba(20, 36, 91, 0.12);
+      box-shadow:0px 2px 6px 0px rgba(20, 36, 91, 0.12);
       border-radius:.4rem;
       font-size:.8rem;
       line-height:1;
@@ -25,7 +25,7 @@
     .swiper-pagination-bullets {
       order:1;
       margin-right:.8rem;
-      font-size:0;
+      font-size:0;      
       > span {
         display:inline-block;
         width:.8rem;
@@ -34,8 +34,9 @@
         cursor:pointer;
       }
       .swiper-pagination-bullet {
-        background:$main-light-color;        
-        // background:$form-bColor; /* 수정필요 */        
+        background:$form-bColor;        
+        box-shadow:0 .2rem .6rem 0 rgba(20, 36, 91, 0.12);  
+        opacity:1;
         &:not(:last-child) {
           margin-right:.8rem;
         }
