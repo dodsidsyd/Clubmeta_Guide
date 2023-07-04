@@ -23,7 +23,7 @@
     &.primary{
         background-color: $main-color;
         color:#fff;
-        &:focus, :active{
+        &:active{
             background-color: $main-dark-color;
         }
     }
@@ -31,21 +31,21 @@
         border: 1px solid $main-color;
         background-color: #fff;
         color:$main-color;
-        &:focus, :active{
+        &:active{
             background-color: $main-bg-color;
         }
     }
     &.flat{
         background-color: $main-bg-color;
         color:$main-color;
-        &:focus, :active{
+        &:active{
             color: $main-dark-color;
         }
     }
     &.ghost{
         background-color: transparent;
         color:$main-color;
-        &:focus, :active{
+        &:active{
             color: $main-dark-color;
         }
     }
