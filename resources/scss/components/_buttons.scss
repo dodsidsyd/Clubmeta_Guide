@@ -1,21 +1,24 @@
 // button
 .button{
     display: inline-block;
-    min-width: max-content;
-    padding: 0.85rem;
+    width: 100%;
+    height: 3.6rem;
     border-radius: 1.2rem;
     font-size: $fs-16;
     font-weight: $bold;
     text-align: center;
+    line-height: 3.6rem;
     &.-l{
-        padding: 1.25rem;
+        height: 4.4rem;
         border-radius: 1.6rem;
+        line-height: 4.4rem;
     }
     &.-s{
-        padding: 0.55rem;
+        height: 2.5rem;
         font-size: $fs-12;
         font-weight: $normal;
         border-radius: 0.8rem;
+        line-height: 2.5rem;
     }
     &.primary{
         background-color: $main-color;
@@ -59,12 +62,14 @@
 
 .btn-follow{
     display: inline-block;
-    padding: 0.55rem;
+    height: 2.5rem;
+    padding: 0 0.8rem;
     border-radius: 0.8rem;
     font-size: $fs-12;
     font-weight: $normal;
     color:$base-color;
     text-align: center;
+    line-height: 2.5rem;
     box-shadow: 0rem 0.2rem 0.6rem rgba(20,36,91,0.12);
     &.-orange{
         background-color: $main-color;
