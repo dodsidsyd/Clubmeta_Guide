@@ -1,0 +1,56 @@
+//switch
+.switch {
+    position: relative;
+    width: 3.2rem;
+    height: 2rem;
+    i {
+        width: 100%;
+        height: 100%;
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0.5rem;
+            width: 2.3rem;
+            height: 1rem;
+            border-radius: 1.2rem;
+            border: 1px solid #e7e7e7;
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 2rem;
+            background-color: #9f9f9f;
+            box-shadow: 0 0.2rem 0.6rem rgba($color: #14245b, $alpha: 0.12);
+        }
+    }
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
+        z-index: 20;
+        &:checked {
+            + i {
+                &::before {
+                    left: 0;
+                    right: auto;
+                }
+                &::after {
+                    right: 0;
+                    left: auto;
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+}
