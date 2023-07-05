@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="format-detection" content="telephone=no">
-    <title>Selectbox_Page</title>
-    <link rel="stylesheet" href="../../resources/css/reset.min.css">
-    <link rel="stylesheet" href="../../resources/css/common.min.css">
-    <script src="../../resources/js/lib/jquery-3.7.0.min.js"></script>
-    <script src="../../resources/js/lib/jquery-ui.min.js"></script>
-    <script src="../../resources/js/common.js"></script>
-    <style>
-    </style>
-</head>
-<body>
-    <div class="pd-20">
-        <h1 class="fwb fs-24">Selectbox</h1>
-        <ul>
-            <li class="mt-4 fs-12">1. sort버튼 누르면 바뀌는 정렬에 따른 이미지가 없음</li>
-        </ul>
-        <div class="flex">
-            <div class="pd-20">
-                <div class="input-wrap select-wrap">
-                    <button type="button" class="btn-filter" aria-label="정렬버튼"></button>
-                    <div class="select">
-                        <select title="옵션선택">
-                            <option value="">최신순</option>
-                            <option value="1">옵션1</option>
-                            <option value="2">옵션2</option>
-                            <option value="3">옵션3</option>
-                            <option value="4">옵션4</option>
-                            <option value="5">옵션5</option>
-                        </select>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>Selectbox_Page</title>
+        <link rel="stylesheet" href="../../resources/css/common.min.css" />
+        <script src="../../resources/js/lib/jquery-3.7.0.min.js"></script>
+        <script src="../../resources/js/lib/jquery-ui.min.js"></script>
+        <script src="../../resources/js/common.js"></script>
+        <style></style>
+    </head>
+    <body>
+        <div class="pd-20">
+            <h1 class="fwb fs-24">Selectbox</h1>
+            <ul>
+                <li class="mt-4 fs-12">1. sort버튼 누르면 바뀌는 정렬에 따른 이미지가 없음</li>
+            </ul>
+            <div class="flex">
+                <div class="pd-20">
+                    <div class="input-wrap select-wrap">
+                        <button type="button" class="btn-filter" aria-label="정렬버튼"></button>
+                        <div class="select">
+                            <select title="옵션선택">
+                                <option value="">최신순</option>
+                                <option value="1">옵션1</option>
+                                <option value="2">옵션2</option>
+                                <option value="3">옵션3</option>
+                                <option value="4">옵션4</option>
+                                <option value="5">옵션5</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
             <br />
             <br />
             <br />
@@ -87,8 +85,8 @@
             <br />
             <br />
             <div style="display: flex; justify-content: center; align-items: center; background: #ddd; height: 200vh">스크롤 확인용 임시 박스</div>
-    </div>    
-</body>
+        </div>
+    </body>
     <script>
         //ahj
         ui.select = {
@@ -154,6 +152,11 @@
                 $('body').append($optionHtml);
                 $options = $(ui.select.className.optionsWrap);
                 $options.data('select', select);
+
+                if (isPop) {
+                    $options.animate({ bottom: 0 }, 500);
+                }
+
                 if (!isPop) {
                     let $top = $btn.offset().top + $btn.outerHeight();
                     let $left = $btn.offset().left;
@@ -181,7 +184,14 @@
                     const $btn = $select.siblings(ui.select.className.btn);
                     if ($btn.length) $btn.removeClass(ui.select.className.btnActive.slice(1));
                     const $wrap = $this.closest(ui.select.className.selectPopWrap).length ? $this.closest(ui.select.className.selectPopWrap) : $this;
-                    $wrap.remove();
+
+                    if ($this.parent('.pop-select').length) {
+                        $wrap.find('.select-options').animate({ bottom: -100 + '%' }, 500, function () {
+                            $wrap.remove();
+                        });
+                    } else {
+                        $wrap.remove();
+                    }
                 });
 
                 const $btn = $(ui.select.className.btn + ui.select.className.btnActive);
