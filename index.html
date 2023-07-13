@@ -112,6 +112,9 @@
             .depth3,
             .depth4 {
             }
+            .id {
+                text-align: center;
+            }
             .path {
             }
             .path a {
@@ -121,6 +124,9 @@
             }
             .path a:hover {
                 text-decoration: underline;
+            }
+            .native {
+                text-align: center;
             }
             .complete,
             .mod {
@@ -163,8 +169,8 @@
             });
         });
 
-        var menuTableHeader = ['구분', '1Depth', '2Depth', '3Depth', '4Depth', '경로', '완료일자', '수정일자', '비고'],
-            menuColSize = [40, 100, 150, 160, 150, 150, '*', 100, 100, 200];
+        var menuTableHeader = ['구분', '1Depth', '2Depth', '3Depth', '4Depth', '5Depth', '화면명', '화면ID', '경로', 'native', '완료일자', '수정일자', '비고'],
+            menuColSize = [40, 120, 130, 130, 130, 130, 100, '*', 100, '*', 50, 100, 100, 200];
 
         // var menuTableHeader = ['구분', '1Depth', '2Depth', '3Depth', '4Depth', '경로', '완료일자', '비고'],
         // 	menuColSize = [40, 100, 150, 150, 150, 150, '*', 100, 200];
@@ -175,7 +181,11 @@
             depth2: '',
             depth3: '',
             depth4: '',
+            depth5: '',
+            name: '',
+            id: '',
             path: '',
+            native: '',
             complete: '',
             mod: '',
             etc: ''
@@ -185,103 +195,738 @@
             // 공통
             {
                 type: '공통',
-                depth1: '공통',
-                path: 'sample/button.html',
-                complete: '2023-06-26',
+                depth1: '앱실행',
+                depth2: 'Splash Screen',
+                name: 'Splash Screen (앱 버전 체크)',
+                id: 'CLMT01_00001',
+                native: 'Y',
                 etc: ''
             },
             {
-                type: '공통',
-                depth1: '공통',
-                path: 'sample/font.html',
-                complete: '2023-06-27',
+                depth2: '네트워크/통신오류',
+                name: '네트워크/통신오류',
+                id: 'CLMT01_00002',
+                native: 'Y',
                 etc: ''
             },
             {
-                type: '공통',
-                depth1: '공통',
-                path: 'sample/card.html',
-                complete: '2023-06-27',
+                depth1: '시스템 공지 팝업',
+                name: '시스템 공지 팝업',
+                id: 'CLMT01_01p01',
+                native: 'Y',
                 etc: ''
             },
             {
-                type: '공통',
-                depth1: '공통',
-                path: 'sample/header.html',
-                complete: '2023-06-27',
+                depth1: '시스템 안내 페이지',
+                name: '시스템 안내 페이지',
+                id: 'CLMT01_01001',
+                native: 'Y',
                 etc: ''
             },
             {
-                type: '공통',
-                depth1: '공통',
-                path: 'sample/input.html',
-                complete: '2023-06-28',
+                depth1: '전체 검색',
+                name: '검색 전 추천 리스트 화면',
+                id: 'CLMT01_02001',
                 etc: ''
             },
             {
-                type: '공통',
-                depth1: '공통',
-                path: 'sample/navigation.html',
-                complete: '2023-06-28',
+                depth2: '검색결과',
+                name: '[탭] 전체 ',
+                id: 'CLMT01_02002',
                 etc: ''
             },
             {
-                type: '공통',
-                depth1: '공통',
-                path: 'sample/selectbox.html',
-                complete: '2023-06-28',
+                name: '[탭] 영상 리스트',
+                id: 'CLMT01_02003',
                 etc: ''
             },
             {
-                type: '공통',
-                depth1: '공통',
-                path: 'sample/textarea.html',
-                complete: '2023-06-28',
+                name: '[탭] 유저 리스트',
+                id: 'CLMT01_02004',
                 etc: ''
             },
             {
-                type: '공통',
-                depth1: '공통',
-                path: 'sample/tabs.html',
-                complete: '2023-06-30',
+                name: '[탭] 음원 리스트',
+                id: 'CLMT01_02005',
                 etc: ''
             },
             {
-                type: '공통',
-                depth1: '공통',
-                path: 'sample/radio.html',
-                complete: '2023-06-30',
+                name: '[탭] 해시태그 리스트',
+                id: 'CLMT01_02006',
                 etc: ''
             },
             {
-                type: '공통',
-                depth1: '공통',
-                path: 'sample/checkbox.html',
-                complete: '2023-06-30',
+                depth2: '[탭] 해시태그',
+                depth3: '해시태그 상세',
+                name: '해시태그 상세 화면',
+                id: 'CLMT01_02007',
                 etc: ''
             },
             {
-                type: '공통',
-                depth1: '공통',
-                path: 'sample/pagination.html',
-                complete: '2023-07-03',
-                etc: ''
-            },
-            {
-                type: '공통',
-                depth1: '공통',
-                path: 'sample/switch.html',
-                complete: '2023-07-05',
+                depth2: '[탭] 해시태그',
+                name: '검색 결과 (Data 없음)',
+                id: 'CLMT01_02008',
                 etc: ''
             },
 
-            // 메인
+            //////////////로그인 및 회원가입
             {
-                type: '메인',
-                depth1: '메인',
-                path: 'main/main.html',
-                complete: '2023-06-26',
-                etc: '테스트 입니다.'
+                type: '로그인 및 회원가입',
+                depth1: '로그인',
+                name: '로그인 팝업',
+                id: 'CLMT02_00p01',
+                etc: ''
+            },
+            {
+                depth1: '계정정보 찾기',
+                depth2: '아이디 찾기',
+                name: '아이디 찾기 안내',
+                id: 'CLMT02_01001',
+                etc: ''
+            },
+            {
+                name: '아이디 찾기 결과 ',
+                id: 'CLMT02_01002',
+                etc: ''
+            },
+            {
+                depth2: '비밀번호 찾기',
+                name: '비밀번호 찾기(안내)',
+                id: 'CLMT02_01003',
+                etc: ''
+            },
+            {
+                name: '비밀번호 찾기(ID정보)',
+                id: 'CLMT02_01004',
+                etc: ''
+            },
+            {
+                name: '비밀번호 재설정',
+                id: 'CLMT02_01005',
+                etc: ''
+            },
+            {
+                depth1: '회원가입',
+                depth2: '이용약관',
+                name: '이용약관',
+                id: 'CLMT02_02001',
+                etc: ''
+            },
+            {
+                depth3: '약관상세',
+                name: '약관 상세 팝업',
+                id: 'CLMT02_02002',
+                etc: ''
+            },
+            {
+                depth2: '기본정보 입력',
+                name: '기본정보 입력',
+                id: 'CLMT02_02003',
+                etc: ''
+            },
+            {
+                depth3: '주소검색',
+                name: '주소 검색',
+                id: 'CLMT02_02p01',
+                etc: ''
+            },
+            {
+                depth2: '관심 카테고리 선택',
+                name: '관심 카테고리 선택',
+                id: 'CLMT02_02004',
+                etc: ''
+            },
+            {
+                depth2: '회원가입 완료 오류',
+                name: '회원가입 완료 오류',
+                id: 'CLMT02_02p02',
+                etc: ''
+            },
+
+            //////////////메인
+            {
+                type: '홈',
+                depth1: '홈',
+                name: '홈 화면',
+                id: 'CLMT03_00001',
+                etc: ''
+            },
+            {
+                depth1: '알림',
+                depth2: '알림',
+                name: '알림 리스트',
+                id: 'CLMT03_01001',
+                etc: ''
+            },
+            {
+                name: '알림 리스트(Data 없음)',
+                id: 'CLMT03_01002',
+                etc: ''
+            },
+            {
+                depth1: 'AI 챌린지',
+                depth2: 'AI 챌린지',
+                name: 'AI 챌린지 리스트',
+                id: 'CLMT03_02001',
+                etc: ''
+            },
+            {
+                depth3: 'AI 챌린지 상세',
+                name: 'AI 챌린지 상세',
+                id: 'CLMT03_02002',
+                etc: ''
+            },
+            {
+                depth1: '음원 챌린지',
+                depth2: '음원 챌린지',
+                name: '음원 챌린지 리스트',
+                id: 'CLMT03_03001',
+                etc: ''
+            },
+            {
+                depth3: '음원 챌린지 상세',
+                name: '음원 챌린지 상세',
+                id: 'CLMT03_03002',
+                etc: ''
+            },
+            {
+                depth1: '비회원 회원가입 안내',
+                depth2: '비회원 회원가입 안내',
+                name: '비회원 회원가입 안내 팝업',
+                id: 'CLMT03_04p01',
+                etc: ''
+            },
+
+            ///////////피드
+            {
+                type: '피드',
+                name: '[탭]전체',
+                id: 'CLMT04_00001',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                name: '[탭]팔로잉',
+                id: 'CLMT04_00002',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                name: '[탭]팔로잉(Data 없음)',
+                id: 'CLMT04_00003',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth2: '더보기',
+                name: '더보기 리스트 팝업',
+                id: 'CLMT04_00p01',
+                etc: ''
+            },
+            {
+                depth3: '영상 신고리스트',
+                name: '영상 신고 리스트 팝업',
+                id: 'CLMT04_00p02',
+                etc: ''
+            },
+            {
+                depth1: '댓글',
+                depth2: '댓글',
+                name: '댓글 팝업',
+                id: 'CLMT04_01p01',
+                etc: ''
+            },
+            {
+                depth3: '댓글 신고 리스트',
+                name: '댓글 신고 리스트 팝업',
+                id: 'CLMT04_01p02',
+                etc: ''
+            },
+
+            ////////////촬영
+            {
+                type: '촬영',
+                depth1: '촬영모드 선택',
+                name: '촬영모드선택 팝업',
+                id: 'CLMT05_00p01',
+                native: 'Y'
+            },
+            {
+                depth1: 'AI 챌린지 참가',
+                depth2: 'AI 챌린지 참가',
+                depth3: 'AI 챌린지 설명',
+                name: 'AI 챌린지 설명 팝업',
+                id: 'CLMT05_01p01',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: 'AI 챌린지 리스트',
+                name: 'AI 챌린지 리스트 팝업',
+                id: 'CLMT05_01p02',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: 'AI 챌린지 촬영 가이드',
+                name: 'AI 챌린지 촬영 가이드 팝업',
+                id: 'CLMT05_01p03',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: 'AI 촬영',
+                depth4: 'AI 분석',
+                name: 'AI 분석',
+                id: 'CLMT05_01001',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth4: 'AI 점수',
+                name: 'AI 점수',
+                id: 'CLMT05_01002',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth4: 'AI 영상 분석 과정',
+                name: 'AI 영상 분석 과정 팝업',
+                id: 'CLMT05_01p04',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: '챌린지 영상 게시',
+                name: '게시 정보 입력 (챌린지 공통)',
+                id: 'CLMT05_01003',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth1: 'AI 챌린지 오픈',
+                depth2: 'AI 챌린지 오픈',
+                depth3: 'AI 챌린지 오픈 설명',
+                name: 'AI 챌린지 오픈 설명 팝업',
+                id: 'CLMT05_02p01',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: '챌린지 오픈',
+                name: 'AI 챌린지 오픈 정보 입력',
+                id: 'CLMT05_02001',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth1: '음원 챌린지 참가',
+                depth2: '음원 챌린지 참가',
+                depth3: '음원 챌린지 설명',
+                name: '음원 챌린지 설명 팝업',
+                id: 'CLMT05_03p01',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: '음원 챌린지 리스트',
+                name: '음원 챌린지 리스트 팝업',
+                id: 'CLMT05_03p02',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: '음원 챌린지 촬영 가이드라인',
+                name: '음원 챌린지 촬영 가이드라인 팝업',
+                id: 'CLMT05_03p03',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth1: '일반 촬영',
+                depth2: '일반 촬영',
+                depth3: '일반 촬영 설명',
+                name: '일반 촬영 설명 팝업',
+                id: 'CLMT05_04p01',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: '일반 촬영 가이드라인',
+                name: '일반 촬영 가이드라인 팝업',
+                id: 'CLMT05_04p02',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth1: '공통',
+                depth2: '촬영프리뷰',
+                depth3: '촬영프리뷰',
+                name: '촬영프리뷰(공통) 팝업',
+                id: 'CLMT05_05p01',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: '타이머 설정',
+                name: '타이머 설정 (공통) 팝업',
+                id: 'CLMT05_05p02',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth2: '음원 선택',
+                depth3: '음원 구간 선택',
+                name: '음원 구간 선택 팝업',
+                id: 'CLMT05_06p01',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth2: '영상편집',
+                depth3: '촬영 완료 후 편집 선택 ',
+                name: '촬영 완료 후 편집 선택 (공통) 팝업',
+                id: 'CLMT05_07p01',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: '필터 선택',
+                name: '필터 선택 리스트(공통) 팝업',
+                id: 'CLMT05_07p02',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: '마스킹 선택',
+                name: '마스킹 선택 리스트(공통) 팝업',
+                id: 'CLMT05_07p03',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: '영상 구간 선택(크롭)',
+                name: '영상 구간 선택(크롭) 팝업',
+                id: 'CLMT05_07p04',
+                native: 'Y',
+                etc: ''
+            },
+            {
+                depth3: '커버 편집',
+                name: '커버 편집 팝업',
+                id: 'CLMT05_07p05',
+                native: 'Y',
+                etc: ''
+            },
+
+            /////////음원
+            {
+                type: '음원',
+                depth1: '음원 홈',
+                name: '음원 홈',
+                id: 'CLMT06_00001'
+            },
+            {
+                depth1: '인기',
+                depth2: '인기',
+                name: '인기 음원 리스트',
+                id: 'CLMT06_01001',
+                etc: ''
+            },
+            {
+                name: '인기 음원 상세',
+                id: 'CLMT06_01002',
+                etc: ''
+            },
+            {
+                depth1: '최신',
+                depth2: '최신',
+                name: '최신 리스트',
+                id: 'CLMT06_02001',
+                etc: ''
+            },
+            {
+                name: '최신 음원 상세',
+                id: 'CLMT06_02002',
+                etc: ''
+            },
+            {
+                depth1: '작곡가',
+                depth2: '작곡가 상세',
+                depth3: '[탭] 클립(영상)',
+                name: '[탭] 클립(영상)',
+                id: 'CLMT06_03001',
+                etc: ''
+            },
+            {
+                name: '[탭] 클립(영상)(Data 없음)',
+                id: 'CLMT06_03002',
+                etc: ''
+            },
+            {
+                depth3: '[탭] 음원',
+                name: '[탭] 음원',
+                id: 'CLMT06_03003',
+                etc: ''
+            },
+            {
+                depth3: '[탭] Talk',
+                name: '[탭] Talk',
+                id: 'CLMT06_03004',
+                etc: ''
+            },
+            {
+                depth1: '장르',
+                depth2: '장르',
+                name: '장르별 음원 상세',
+                id: 'CLMT06_04001',
+                etc: ''
+            },
+
+            //////마이페이지
+            {
+                type: '마이페이지',
+                depth1: '프로필',
+                name: '프로필 홈 ([탭] 전체)',
+                id: 'CLMT07_00001',
+                etc: ''
+            },
+            {
+                depth1: '영상리스트 [탭]전체(디폴트)',
+                name: '[탭] 일반영상',
+                id: 'CLMT07_00002',
+                etc: ''
+            },
+            {
+                name: '[탭] 내가 오픈한 챌린지',
+                id: 'CLMT07_00003',
+                etc: ''
+            },
+            {
+                name: '[탭] 내가 참여한 챌린지',
+                id: 'CLMT07_00004',
+                etc: ''
+            },
+            {
+                name: '영상 리스트 (Data 없음)',
+                id: 'CLMT07_00005',
+                etc: ''
+            },
+            {
+                depth2: '영상 내 더보기',
+                name: '개별 영상 설정 팝업',
+                id: 'CLMT07_00p01',
+                etc: ''
+            },
+            {
+                depth1: '설정 메뉴',
+                depth2: '설정',
+                name: '설정 홈 팝업',
+                id: 'CLMT07_01p01',
+                etc: ''
+            },
+            {
+                depth3: '개인정보 변경',
+                name: '개인정보 변경',
+                id: 'CLMT07_01001',
+                etc: ''
+            },
+            {
+                depth3: '내 활동',
+                depth4: '좋아요',
+                depth5: '영상',
+                name: '[탭] 좋아요한 영상 리스트',
+                id: 'CLMT07_01002',
+                etc: ''
+            },
+            {
+                depth5: '음원',
+                name: '[탭] 좋아요한 음원 리스트',
+                id: 'CLMT07_01003',
+                etc: ''
+            },
+            {
+                depth4: '북마크',
+                name: '북마크 영상 리스트',
+                id: 'CLMT07_01004',
+                etc: ''
+            },
+            {
+                depth3: '공개 범위 설정',
+                name: '공개 범위 설정 (공개/비공개)',
+                id: 'CLMT07_01005',
+                etc: ''
+            },
+            {
+                depth3: '알림 설정',
+                name: '알림 설정',
+                id: 'CLMT07_01006',
+                etc: ''
+            },
+            {
+                depth3: '이용약관',
+                name: '이용약관 팝업',
+                id: 'CLMT07_01p02',
+                etc: ''
+            },
+            {
+                depth3: '개인정보 처리방침',
+                name: '개인정보 처리방침 팝업',
+                id: 'CLMT07_01p03',
+                etc: ''
+            },
+            {
+                depth3: '커뮤니티 가이드',
+                name: '커뮤니티 가이드 팝업',
+                id: 'CLMT07_01p04',
+                etc: ''
+            },
+            {
+                depth3: '[탭] 공지사항',
+                name: '[탭] 공지사항 리스트',
+                id: 'CLMT07_01007',
+                etc: ''
+            },
+            {
+                name: '공지사항 상세',
+                id: 'CLMT07_01008',
+                etc: ''
+            },
+            {
+                depth3: '[탭] FAQ',
+                name: '[탭] FAQ 리스트',
+                id: 'CLMT07_01009',
+                etc: ''
+            },
+            {
+                name: 'FAQ 상세',
+                id: 'CLMT07_01010',
+                etc: ''
+            },
+            {
+                depth3: '이벤트',
+                depth4: '이벤트 리스트',
+                name: '이벤트 리스트',
+                id: 'CLMT07_01011',
+                etc: ''
+            },
+            {
+                depth4: '이벤트 상세',
+                name: '이벤트 상세',
+                id: 'CLMT07_01012',
+                etc: ''
+            },
+            {
+                depth3: '앱버전 정보 및 업데이트',
+                name: '앱버전 정보 및 업데이트',
+                id: 'CLMT07_01013',
+                etc: ''
+            },
+            {
+                depth3: '탈퇴',
+                depth4: '탈퇴 사유',
+                name: '탈퇴 사유 리스트 선택',
+                id: 'CLMT07_01014',
+                etc: ''
+            },
+            {
+                depth4: '약관',
+                name: '약관 확인(shoe 복구 불가 고지 동의)',
+                id: 'CLMT07_01015',
+                etc: ''
+            },
+            {
+                depth4: '탈퇴 확인',
+                name: '탈퇴 확인 완료',
+                id: 'CLMT07_01015',
+                etc: ''
+            },
+            {
+                depth1: '팔로워/팔로잉',
+                depth2: '팔로워/팔로잉',
+                name: '[텝] 팔로워 리스트',
+                id: 'CLMT07_02001',
+                etc: ''
+            },
+            {
+                name: '[탭] 팔로잉 리스트',
+                id: 'CLMT07_02002',
+                etc: ''
+            },
+            {
+                depth1: 'Shoe',
+                depth2: 'Shoe',
+                name: 'Shoe 히스토리 화면 팝업',
+                id: 'CLMT07_03p01',
+                etc: ''
+            },
+            {
+                depth1: '지갑',
+                depth2: '지갑',
+                name: '지갑 메뉴 리스트',
+                id: 'CLMT07_04001',
+                etc: ''
+            },
+            {
+                depth3: '포인트 지갑',
+                name: '포인트 지갑',
+                id: 'CLMT07_04002',
+                etc: ''
+            },
+            {
+                depth3: 'MDT 지갑',
+                name: 'MDT 지갑',
+                id: 'CLMT07_04003',
+                etc: ''
+            },
+            {
+                depth3: '교환',
+                name: '교환 화면',
+                id: 'CLMT07_04004',
+                etc: ''
+            },
+            {
+                depth1: '뱃지',
+                depth2: '뱃지',
+                name: '뱃지 팝업',
+                id: 'CLMT07_05p01',
+                etc: ''
+            },
+            {
+                depth3: '대표 뱃지 설정 ',
+                name: '대표 뱃지 설정 팝업',
+                id: 'CLMT07_05p02',
+                etc: ''
+            },
+            {
+                depth1: '프로필 편집',
+                depth2: '프로필 편집',
+                name: '프로필 편집 팝업',
+                id: 'CLMT07_06p01',
+                etc: ''
+            },
+            {
+                depth1: '다른 사람 프로필',
+                name: '유저 프로필',
+                id: 'CLMT07_07001',
+                etc: ''
+            },
+            {
+                depth2: '더보기',
+                name: '공유 신고 선택 리스트 팝업',
+                id: 'CLMT07_07p01',
+                etc: ''
+            },
+            {
+                depth3: '신고',
+                name: '신고리스트 팝업',
+                id: 'CLMT07_07p02',
+                etc: ''
+            },
+            {
+                name: '신고 완료 팝업',
+                id: 'CLMT07_07p03',
+                etc: ''
             }
         ];
     </script>
